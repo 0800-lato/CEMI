@@ -1,6 +1,5 @@
-* {
-	box-sizing: border-box;
-}
+@import url('./general.css');
+@import url('./home.css');
 /* HEADER */
 
 
