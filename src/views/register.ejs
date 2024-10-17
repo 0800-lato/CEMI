@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<%- include('./partials/head',{
+		title : 'Registro'
+	}) %>
+	<body>
+		<div class="container"> 
+			<%- include('./partials/header') %>
+			<main> 
+				<section class="form-container">
+					<h1>Registrá tu emprendimiento</h1>
+						<form class="access-form" action="" method="get"> 
+							<div class="field-group">
+								<label for="nombredelemprendimiento">Nombre del emprendimiento</label>		
+								<p class="form-text alert-hide">
+									Obligatorio.
+								</p>
+							</div>
+				      <div class="field-group">
+				      	<label for="email">Email</label>
+								<input type="email" id="email" name="email" placeholder="Ingresá tu correo electrónico" required>
+								<p class="form-text alert-hide">
+									Obligatorio.
+								</p>
+				      </div>
+							<div class="field-group">
+								<label for="password">Contraseña</label>
+								<input type="password" id="passsword" name="password" placeholder="password" value="" required>
+								<p class="form-text alert-hide">
+									Obligatorio.
+								</p>
+							</div>
+							<div class="field-group">
+								<label for="password">Confirmá tu contraseña</label>
+								<input type="password" id="passsword" name="password" placeholder="password" value="" required>
+								<p class="form-text alert-hide">
+									Obligatorio.
+								</p>
+							</div>
+                            <label for="description" class="form-label">Descripción</label>
+                            <textarea style="resize: none;" name="description" class="form-control" id="description" rows="3"></textarea>                              
+                            <small id="description-error" class="text-danger ms-2" hidden>Error al cargar la información del emprendimiento</small>
+                            </div>
+                            <!-- revisar -->
+
+				      <h3>Categoría de tu emprendimiento (sólo seleccioná las que consideres más representativas)</h3>
+				     <input type="checkbox" id="beauty" name="categorias" value="belleza">
+				      <label for="beauty">Belleza</label>
+
+				      <input type="checkbox" id="tech" name="categorias" value="tecnologia">
+				      <label for="tech">Tecnología</label>
+
+				      <input type="checkbox" id="bazar" name="categorias" value="bazar">
+				      <label for="bazar">Bazar</label>
+
+                      <input type="checkbox" id="acc" name="categorias" value="accesorios">
+				      <label for="acc">Accesorios</label>
+
+				      <input type="checkbox" id="gastro" name="categorias" value="gastronomia">
+				      <label for="gastronomia">Gastronomía</label>
+
+                      <input type="checkbox" id="indu" name="categorias" value="indumentaria">
+				      <label for="indumentaria">Indumentaria</label>
+
+                      <div class="col-12 col-md-6 mb-3">
+                        <label for="image" class="form-label">Agregá la imagen principal de tu emprendimiento</label>
+                        <input name="image" type="file" class="form-control" id="image">
+                        <small id="image-error" class="text-danger ms-2" hidden>Error al cargar la imagen</small>
+                      </div>
+
+                      <div class="col-12 col-md-6 mb-3">
+                        <label for="image" class="form-label">Agregá una imagen adicional de tu emprendimiento</label>
+                        <input name="image" type="file" class="form-control" id="image" >
+                        <small id="image-error" class="text-danger ms-2" hidden>Error al cargar la imagen</small>
+                      </div>
+<h3>Redes sociales</h3>
+                      <div class="field-group">
+                        <label for="linkedin">LinkedIn</label>		
+                        <!-- revisar si este es el formato para un link o hay que modificarlo -->
+                        <p class="form-text alert-hide"> 
+                            Obligatorio.
+                        </p>
+                        <!-- lo dejamos obligatorio? quizás hay gente que no tiene linkedin -->
+                    </div>
+                    <div class="field-group">
+                        <label for="instagram">Instagram</label>		
+                        <!-- revisar si este es el formato para un link o hay que modificarlo -->
+                        <p class="form-text alert-hide"> 
+                            Obligatorio.
+                        </p>
+                        <!-- lo dejamos obligatorio?  -->
+                    </div>
+                    <div class="field-group">
+                        <label for="facebook">Facebook</label>		
+                        <!-- revisar si este es el formato para un link o hay que modificarlo -->
+                        <p class="form-text alert-hide"> 
+                            Obligatorio.
+                        </p>
+                        <!-- lo dejamos obligatorio?  -->
+                    </div>
+					<input type="checkbox" id="tyc" name="tyc" value="yes" required>
+				      <label for="tyc">Acepto los términos y condiciones.</label>
+
+				      <p>Registrarme</p>
+				      <input type="submit" value="Registrarme">
+							<input type="reset" value="Cancelar">
+				    </form>
+				</section>
+			</main>
+		</div>
+
+	</body>
+</html>
+
+<!-- no sé si deberíamos redirigir esta información en el formulario al administrador:/ -->
