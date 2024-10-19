@@ -17,6 +17,4 @@ app.use("/", indexRouter)
 
 
 
-
-
 app.listen(port, () => `Servidor corriendo en http://localhost:${port}`);
