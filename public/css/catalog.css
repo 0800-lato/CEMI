@@ -3,16 +3,19 @@
 
 .catalog__main__section__navbar{    
     padding: 10px;
-    background-color: rgb(91, 90, 90);
+    background-color: var(--color-SalmonRed);
     justify-content: space-between;
     border: 1px  ;
     border-radius: 10px;
+}
+.catalog__main__section__navbar button{
+    border-color: var(--color-PearlWhite);
 }
 .catalog_header-navbar a {
     font-size: 2rem;
 }
 .catalog__main__section{
-    margin-bottom: 40px;
+    margin: 0px 15px 30px;
 }
 .catalog__main__section article{
     box-shadow: 5px 5px 15px black;
@@ -20,7 +23,7 @@
     border-radius: 10px;
     
 
-}
+} 
 /* MAIN */
 
 .items{
@@ -35,7 +38,7 @@
 /* Estilo para el banner */
 .banner {
     position: relative;
-    background-image: url('/img/fondoBanner');
+    background-image: url('/img/banner.jpg');
     background-size: cover;
     background-position: center;
     height: 30vh;
@@ -46,13 +49,6 @@
     margin-bottom: 20px;
 }
 
-.banner h1 {
-    color: white;
-    font-size: 2.4rem;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
 
 /* falta ajustar posicion de las tarjetas*/
 .div_cards {
@@ -63,13 +59,3 @@
 }
 
 /* FORMULARIOS */
-
-
-
-/* FOOTER */
-footer {
-    background-color: rgb(91, 90, 90);
-    display: flex;
-    justify-content: space-around;
-
-}

@@ -1,12 +1,27 @@
 <header class="container-fluid">
-    <nav class="navbar">
-      <div class="container">
-        <a class="navbar-a" href="/menu">
-          <i class="fa-solid fa-bars" style="color: #e3ebf8"></i>
+  <nav class="navbar">
+    <div class="container">
+
+      <div class="header__enlaces">
+        <a class="navbar-a" href="#" id="menu-toggle">
+          <i class="fa-solid fa-bars" style="color: var(--color-PearlWhite)"></i>
         </a>
-        <a class="navbar-a" href="/login">
-          <i class="fa-solid fa-right-to-bracket" style="color: #e3ebf8"></i
-        ></a>
+        <nav id="menu" class="hidden">
+
+          <ul>
+            <li> <img src="/public/img/img.png" class="card-img-top" alt="LOGO" /></li>
+            <!--LUEGO PONER IMAGEN DEL LOGO-->
+            <li><a href="/"> Home </a></li>
+            <li><a href="/login"> Sumate </a></li>
+            <li><a href="/about"> Nosotros</a></li>
+            <li><a href="/contact"> Contacto</a></li>
+            <a class="navbar-a" href="/login">
+              <i class="fa-solid fa-right-to-bracket" style="color: var(--color-PearlWhite)"></i>
+            </a>
+          </ul>
+        </nav>
       </div>
-    </nav>
-  </header>
+
+    </div>
+  </nav>
+</header>
