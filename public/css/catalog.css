@@ -59,13 +59,3 @@
 }
 
 /* FORMULARIOS */
-
-
-
-/* FOOTER */
-footer {
-    background-color: var(--color-SmokyBlue);
-    display: flex;
-    justify-content: space-around;
-
-}
