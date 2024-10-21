@@ -6,7 +6,6 @@
     <%- include('./partials/header',{ title : 'Catalog' }) %>
     <main class="container">
       <div class="banner">
-        <h1>Red de mujeres emprendedoras</h1>
       </div>
 
       <!--buscador de categorias-->
@@ -23,7 +22,7 @@
               <div class="dropdown">
                 <button
                   class="btn btn-primary dropdown-toggle"
-                  style="background-color: rgb(91, 90, 90)"
+                  style="background-color: var(--color-salmonRed)"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -213,16 +212,6 @@
       </section>
       </section>
     </main>
-    <footer>
-      <div class="about">
-        <h3>Sobre nosotros</h3>
-      </div>
-      <div class="explore">
-        <h3>Explorá</h3>
-      </div>
-      <div class="resources">
-        <h3>Recursos</h3>
-      </div>
-    </footer>
+<%- include('./partials/footer',{title :'catalog'}) %>
   </body>
 </html>
