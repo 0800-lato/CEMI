@@ -12,6 +12,7 @@ header {
     }
     .container{
         padding: 0px 14px;
+        
  
     }
     .navbar {
@@ -54,6 +55,7 @@ header {
     .header__enlaces a {
         color: var(--color-PearlWhite);
         text-decoration: none;
+   
     }
 
     
@@ -69,6 +71,7 @@ header {
         .header__enlaces #menu-toggle {
             display: block;
         }
+        
         
     }
 
