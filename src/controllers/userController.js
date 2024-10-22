@@ -1,10 +1,1 @@
-const path = require('path');
-
-// está bien esto?
-const usersController = {
-  register: (req, res) => {
-    res.render('registro'); 
-  }
-};
-
-module.exports = usersController;
+/*LUEGO CREAR CONTROLADORES DE RUTAS*/

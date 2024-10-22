@@ -14,3 +14,6 @@ Allí existe la posibilidad de crear un usuario, lo cual conlleva la creación d
 - Callero Luchesi, Mar.
 - Gimenez, Federico.
 - Rodriguez, Joaquín.
+
+
+(--Debemos instalar MULTER en NPM, buscar en la web como utilizar--)
