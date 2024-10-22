@@ -14,10 +14,12 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname, 'views'));
 
 app.use("/", indexRouter)
+app.use("/admin", indexRouter)
 
 
 
 
 
 
-app.listen(port, () => `Servidor corriendo en http://localhost:${port}`);
+
+app.listen(port, () => 'Servidor corriendo en http://localhost:' + port);

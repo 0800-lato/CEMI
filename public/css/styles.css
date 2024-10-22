@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("./general.css");
 @import url("./home.css");
 @import url("./product-detail.css");
@@ -60,3 +61,11 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+=======
+@import url('./general.css');
+@import url('./home.css');
+@import url('./catalog.css');
+@import url('./variables.css');
+@import url('./main.css'); /*leer nota escrita en main.css*/
+@import url('./footer.css');
+>>>>>>> aad0bfc41d069ecf6359b30e827eb393ff722793
