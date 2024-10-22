@@ -68,7 +68,25 @@ header {
         display: none;
     }
 
+
+
+    /*MODAL*/
     
+    .modal-content {
+        background-color: var(--color-PearlWhite); 
+      }
+    .modal-content .btn {
+        background-color: var(--color-LipstickRed);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 25px; 
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s, transform 0.3s; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
 
     @media (max-width: 768px) {
         .header__enlaces nav {
@@ -89,7 +107,7 @@ header {
         #menu-toggle {
             display: none;
         }
-        .header__enlaces .login {
+        .header__enlaces .navbar-a1 {
             display: none;
         }
     }
