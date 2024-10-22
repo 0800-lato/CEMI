@@ -1,0 +1,26 @@
+.banner-product {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.portada {
+  align-self: center;
+  display: flex;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 25px 0 25px;
+}
+
+.resume-product {
+  margin-top: 70px;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+}
