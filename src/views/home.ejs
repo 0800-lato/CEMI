@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Home</title>
-</head>
-
+    <%- include('./partials/head',{ title : 'Home' }) %>
 <!-- reemplazar por el header, esto era para probar -->
-<body>
+<body class="home">
+    <%- include('./partials/header',{ title : 'home' }) %>
+
     <div class="container">
-        <%- include('./partials/header') %>
         <main>
             <div id="caruseldeimagenes" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -42,13 +36,13 @@
             <section class="mujeres-emprendedoras">
                 <h2>Mujeres emprendedoras</h2>
                 <p>Texto a definir por la fundación</p>
-                <a class="btn btn-outline-dark" href="/mujeresemprendedoras">Conocelas</a>
+                <a class="btn btn-outline-dark" href="/catalog">Conocelas</a>
                 <a class="btn btn-outline-dark" href="/register">Sumate</a>
             </section>
             <section class="gifts">
                 <h2>Regalos empresariales</h2>
                 <p>Texto a definir por la fundación</p>
-                <a class="btn btn-outline-dark" href="/mujeresemprendedoras">Conocelas</a>
+                <a class="btn btn-outline-dark" href="/catalog">Conocelas</a>
             </section>
             </div>
         </main>

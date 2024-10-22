@@ -12,7 +12,7 @@
 }
 
 /* General */
-body {
+body.home {
     font-family: 'Roboto', sans-serif;
     background-color: var(--color-PearlWhite);
     color: var(--color-CoolGray);
@@ -30,7 +30,7 @@ body {
 }
 
 /* Carrusel */
-.carousel-inner img {
+body.home .carousel-inner img {
     width: 100%;
     height: 600px; 
     object-fit: cover; 
@@ -38,7 +38,7 @@ body {
 }
 
 /* Secciones */
-section {
+body.home section {
     padding: 40px 20px;
     background-color: var(--color-PearlWhite);
     margin: 20px 0;
@@ -47,12 +47,12 @@ section {
     transition: transform 0.3s; 
 }
 
-section:hover {
+body.home section:hover {
     transform: scale(1.02); 
 }
 
 /* Títulos */
-h2 {
+body.home h2 {
     color: var(--color-CoolGray);
     margin-top: 0;
     font-size: 2rem; 
@@ -61,13 +61,13 @@ h2 {
 }
 
 /* Párrafos */
-p {
+body.home p {
     margin-bottom: 20px; 
     line-height: 1.6; 
 }
 
 /* Botones */
-button, .btn {
+body.home  .btn {
     background-color: var(--color-LipstickRed);
     color: white;
     border: none;
@@ -79,22 +79,22 @@ button, .btn {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:hover, .btn:hover {
+body.home   .btn:hover {
     background-color: var(--color-SalmonRed);
     transform: scale(1.05); 
 }
 
-.btn + .btn {
+body.home .btn + .btn {
     margin-left: 10px; 
 }
 
 /* adaptaciones a mobile, tablet, pc */
 @media (max-width: 768px) {
-    h2 {
+    body.home  h2 {
         font-size: 1.5rem; 
     }
 
-    button, .btn {
+    body.home button, body.home  .btn {
         width: 100%; 
         margin-bottom: 10px; 
     }

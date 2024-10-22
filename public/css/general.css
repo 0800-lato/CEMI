@@ -1,7 +1,9 @@
 /* reglas generales y variables */
+
 * {
     margin : 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 header {
     background-color: var(--color-SalmonRed);
@@ -11,7 +13,7 @@ header {
     
     }
     .container{
-        padding: 0px 14px;
+        padding: 30px 14px;
         
  
     }
