@@ -4,7 +4,9 @@
     margin : 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+  
 }
+
 header {
     background-color: var(--color-SalmonRed);
   
@@ -28,6 +30,7 @@ header {
         display: flex;
         align-items: center;
         width: 100%;
+        justify-content: space-between;
     }
     
     .header__enlaces nav {
@@ -84,6 +87,9 @@ header {
             display: block;
         }
         #menu-toggle {
+            display: none;
+        }
+        .header__enlaces .login {
             display: none;
         }
     }
