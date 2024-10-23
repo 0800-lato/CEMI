@@ -7,11 +7,16 @@
           <i class="fa-solid fa-bars" style="color: var(--color-PearlWhite)"></i>
         </a>
 
+        
+
+
+
+
         <!-- Button trigger modal -->
 
         <a class="navbar-a1" href="#">
-        <i class="fa-solid fa-right-to-bracket" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-          style="color: var(--color-PearlWhite)"></i></a>
+          <i class="fa-solid fa-right-to-bracket" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            style="color: var(--color-PearlWhite)"></i></a>
 
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -26,26 +31,28 @@
               <div class="modal-body">
 
 
-                <!-- formulario de registro-->
-                <form action="/login" method="POST">
-              
-                    <section>
-                      <label for="email">Correo electrónico:</label>
-                      <input type="email" id="email" name="email" required>
-                     </section> <section>
-                      <label for="password">Contraseña:</label>
-                      <input type="password" id="password" name="password" required>
-                     </section>
+                <!-- formulario de registro REVISAR GUARADO DE DATOS-->
+                <form class="access-form" action="" method="get">
 
-                      <button type="submit">Ingresar</button>
+                  <section>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                  </section>
+                  <section>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                  </section>
 
-                      <div class="field-group remember-me">
-                        <input type="checkbox" id="remember-me" name="remember-me" value="">
-                        <label for="remember-me">Recordarme</label>
-                      </div>
-                    </section>
-                 </form>
+                  <button type="submit">Ingresar</button>
+
+                  <div class="field-group remember-me">
+                    <input type="checkbox" id="remember-me" name="remember-me" value="">
+                    <label for="remember-me">Recordarme</label>
+                  </div>
+                  </section>
+                </form>
               </div>
+
               <!-- Finaliza form de registro-->
 
 
@@ -63,17 +70,18 @@
 
 
         <nav id="menu" class="hidden">
-
+           
+     
           <ul>
             <li> <img src="/public/img/img.png" class="card-img-top" alt="LOGO" /></li>
             <!--LUEGO PONER IMAGEN DEL LOGO-->
             <li><a href="/"> Home </a></li>
-            <li><a href="/login"> Sumate </a></li>
+            <li><a href="/register"> Sumate </a></li>
             <li><a href="/about"> Nosotros</a></li>
             <li><a href="/contact"> Contacto</a></li>
             <a class="navbar-a" href="#">
               <i class="fa-solid fa-right-to-bracket" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-              style="color: var(--color-PearlWhite)"></i>
+                style="color: var(--color-PearlWhite)"></i>
             </a>
           </ul>
         </nav>
@@ -81,4 +89,5 @@
 
     </div>
   </nav>
+
 </header>
