@@ -27,8 +27,10 @@ header {
         display: flex;
       
         align-items: center;
-        padding: 10px;
-        align-items: center; justify-content: center;
+    
+        align-items: center;
+         justify-content: center;
+         position:relative;
     }
 
     .header__enlaces {
@@ -91,29 +93,36 @@ header {
         transition: background-color 0.3s, transform 0.3s; 
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+.navbar-a{
+    position:absolute;
+    top: 50px;
+    right: 10px;
+}
 
-
-    @media (max-width: 768px) {
-        .header__enlaces nav {
+    @media (min-width: 768px) {
+        .header__enlaces 
+        .navbar-a1 {
+            display: none;
+        }.navbar-a{
+       
+            right: 50px;
+        }
+        
+        #menu img {
             display: none;
         }
-
-        .header__enlaces #menu-toggle {
-            display: block;
-        }
-        
-        
     }
 
     @media (min-width: 1024px) {
         #menu {
             display: block;
         }
-        #menu-toggle {
-            display: none;
-        }
-        .header__enlaces .navbar-a1 {
-            display: none;
-        }
+      
+    }.navbar-a{
+       
+        right: 50px;
     }
-}
+        
+      
+    
+    }
