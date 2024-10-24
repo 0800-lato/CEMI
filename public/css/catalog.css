@@ -3,7 +3,7 @@
 
 .catalog__main__section__navbar{    
     padding: 10px;
-    background-color: var(--color-SalmonRed);
+    background-color: var(--color-SmokyBlue);
     justify-content: space-between;
     border: 1px  ;
     border-radius: 10px;
@@ -55,4 +55,4 @@
 
 }
 
-/* FORMULARIOS */
+
