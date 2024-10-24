@@ -2,8 +2,8 @@
 /* General */
 body.home {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--color-PearlWhite);
-    color: var(--color-CoolGray);
+
+    color: var(--color-PurpleDos);
     margin: 0;
     padding: 0;
 }
@@ -28,7 +28,6 @@ body.home .carousel-inner img {
 /* Secciones */
 body.home section {
     padding: 40px 20px;
-    background-color: var(--color-PearlWhite);
     margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -41,10 +40,10 @@ body.home section:hover {
 
 /* Títulos */
 body.home h2 {
-    color: var(--color-CoolGray);
+    color: var(--color-PurpleDos);
     margin-top: 0;
     font-size: 2rem; 
-    border-bottom: 2px solid var(--color-LipstickRed); 
+    border-bottom: 2px solid var(--color-SmokyBlue); 
     padding-bottom: 10px; 
 }
 
@@ -56,7 +55,7 @@ body.home p {
 
 /* Botones */
 body.home  .btn {
-    background-color: var(--color-LipstickRed);
+    background-color: var(--color-SmokyBlue);
     color: white;
     border: none;
     padding: 12px 24px;
