@@ -86,7 +86,3 @@ body.home .btn + .btn {
         margin-bottom: 10px; 
     }
 }
-
-footer.home {
-    width: 100%;
-}
