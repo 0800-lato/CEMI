@@ -8,7 +8,7 @@
 }
 
 header {
-    background-color: var(--color-PurpleMariposa);
+    background-color: var(--color-SalmonRed);
   
     .container-fluid {
         background-color: inherit;
@@ -126,9 +126,6 @@ header {
       
     
     }
-<<<<<<< HEAD
-=======
-}
+
 
 /* FORMULARIOS */
->>>>>>> ec178a95148c782a149e7aa96680bec66036572b
