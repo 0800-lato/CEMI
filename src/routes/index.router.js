@@ -9,5 +9,6 @@ router.get("/products-detail",(req,res)=> res.render("product-detail"));
 router.get("/login", (req,res) => res.render("login"));
 router.get("/register", (req,res) => res.render("register"));
 router.get("/admin/users", (req,res) => res.render("admin-users"));
+router.get("/user-profile", (req, res) => res.render("user-profile"));
 
 module.exports = router

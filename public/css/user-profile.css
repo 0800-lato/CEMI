@@ -1,0 +1,124 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-PurpleDos);
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.profile-container h1 {
+    color: var(--color-PurpleDos);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field-group h2 {
+    color: var(--color-SmokyBlue);
+    font-size: 1.8rem;
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-SmokyBlue);
+}
+
+.field-group p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+
+.categories {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.categories li {
+    background-color: var(--color-SmokyBlue);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.field-group img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.social-links p {
+    margin: 5px 0;
+}
+
+.social-links a {
+    color: var(--color-PurpleDos);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--color-SalmonRed);
+}
+
+
+button {
+    background-color: var(--color-SmokyBlue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: var(--color-SalmonRed);
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .profile-container h1 {
+        font-size: 2rem;
+    }
+
+    .field-group h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}

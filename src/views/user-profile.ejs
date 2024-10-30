@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/head', { title: 'Perfil de Usuario' }) %>
+<body>
+    <main> 
+        <section class="profile-container">
+            <h1>Perfil de Emprendimiento</h1>
+            <div class="profile-details">
+                <div class="field-group">
+                    <h2>Nombre del emprendimiento</h2>
+                    <p id="nombredelemprendimiento"><%= user.nombredelemprendimiento %></p>
+                </div>
+                <div class="field-group">
+                    <h2>Email</h2>
+                    <p id="email"><%= user.email %></p>
+                </div>
+                <div class="field-group">
+                    <h2>Descripción</h2>
+                    <p id="description"><%= user.description %></p>
+                </div>
+                <h3>Categoría de tu emprendimiento</h3>
+                <ul class="categories">
+                    <% user.categorias.forEach(function(categoria) { %>
+                        <li><%= categoria %></li>
+                    <% }) %>
+                </ul>
+                <div class="field-group">
+                    <h2>Imagen de Perfil</h2>
+                    <img src="<%= user.image %>" alt="Imagen de perfil del emprendimiento">
+                </div>
+                <div class="field-group">
+                    <h2>Imagen de Portada</h2>
+                    <img src="<%= user.imageAdditional %>" alt="Imagen de portada del emprendimiento">
+                </div>
+                <h3>Redes sociales</h3>
+                <div class="social-links">
+                    <% if (usuario.linkedin) { %>
+                        <p><a href="<%= user.linkedin %>">LinkedIn</a></p>
+                    <% } %>
+                    <% if (usuario.instagram) { %>
+                        <p><a href="<%= user.instagram %>">Instagram</a></p>
+                    <% } %>
+                    <% if (usuario.facebook) { %>
+                        <p><a href="<%= user.facebook %>">Facebook</a></p>
+                    <% } %>
+                </div>
+                <button onclick="location.href='/admin/editar-perfil'">Editar Perfil</button>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

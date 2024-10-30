@@ -75,6 +75,22 @@ body.home .btn + .btn {
     margin-left: 10px; 
 }
 
+.carousel-control-next, 
+.carousel-control-prev {
+    background-color: transparent; 
+    border: none; 
+}
+
+.carousel-control-next:hover, 
+.carousel-control-prev:hover {
+    background-color: transparent; }
+
+    .carousel-control-next, 
+    .carousel-control-prev {
+        display: none !important; 
+    }
+
+
 /* adaptaciones a mobile, tablet, pc */
 @media (max-width: 768px) {
     body.home  h2 {
@@ -86,3 +102,6 @@ body.home .btn + .btn {
         margin-bottom: 10px; 
     }
 }
+
+
+/* hay que adaptar esto para q quede bien en relacion al mobile y tablet */
