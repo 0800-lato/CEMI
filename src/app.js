@@ -2,8 +2,9 @@ const express = require('express');
 const path = require ('path');
 const app = express();
 const port = 3000;
+
 const indexRouter = require ('./routes/index.router');
-const { log } = require('console');
+const entrepreneurshipRouter = require('./routes/entrepreneurship.routes')
 
 
 //configuración de los recursos estáticos
@@ -15,6 +16,7 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname, 'views'));
 
 app.use("/", indexRouter)
+app.use("/entrepreneuships", entrepreneurshipRouter)
 app.use("/admin", indexRouter)
 
 

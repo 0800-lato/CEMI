@@ -12,55 +12,49 @@
       <!--buscador de categorias-->
       <section>
         <nav class="catalog__main__section__navbar">
-          <div>
-            <form class="d-flex" role="search">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <form action="" class="d-flex align-items-center gap-2">
+                <select name="" id="" class="form-select">
+                  <option value="" selected hidden>Filtrar por categorías</option>
+                  <option value="">
+                    Belleza
+                  </option>
+                  <option value="">
+                    Tecno
+                  </option>
+                </select>
+                <button
+                class="btn btn-outline-light"
+                style="background-color: var(--color-salmonRed)"
+                type="submit"
+              
+              >
+                Filtrar
+              </button>
+            
+              </form>
+            </div>
+           <div class="col-12 col-md-6">
+            <form class="d-flex gap-2" role="search">
               <input
-                class="form-control me-2"
+                class="form-control"
                 type="search"
-                placeholder="Buscar categorias"
+                placeholder="O ingresá lo que querés buscar..."
                 aria-label="Search"
               />
-              <div class="dropdown">
-                <button
-                  class="btn btn-primary dropdown-toggle"
-                  style="background-color: var(--color-salmonRed)"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Categorias
-                </button>
-                <ul class="dropdown-menu">
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      Belleza
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      Tecnología
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item" type="button">
-                      Bazar
-                    </button>
-                  </li> <li>
-                    <button class="dropdown-item" type="button">
-                      Accesorios
-                    </button>
-                  </li> <li>
-                    <button class="dropdown-item" type="button">
-                      Gastronomía
-                    </button>
-                  </li> <li>
-                    <button class="dropdown-item" type="button">
-                      Indumentaria
-                    </button>
-                  </li>
-                </ul>
-              </div>
+              <button
+              class="btn btn-outline-light"
+              style="background-color: var(--color-salmonRed)"
+              type="submit"
+            
+            >
+            Buscar
+          </button>
             </form>
+           </div>
+           
+         
           </div>
         </nav>
         <section  class="catalog__main__section">
