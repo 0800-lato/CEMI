@@ -75,14 +75,4 @@ body.home .btn + .btn {
     margin-left: 10px; 
 }
 
-/* adaptaciones a mobile, tablet, pc */
-@media (max-width: 768px) {
-    body.home  h2 {
-        font-size: 1.5rem; 
-    }
-
-    body.home button, body.home  .btn {
-        width: 100%; 
-        margin-bottom: 10px; 
-    }
-}
+/*elimine el @media de los buttoms por crear conflictos entre las clases del home y las demas vistas*/

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head',{ title : 'Catalog' }) %>
+  <%- include('../partials/head',{ title : 'Catalog' }) %>
 
   <body class="catalog catalog__main__container">
-    <%- include('./partials/header',{ title : 'Catalog' }) %>
+    <%- include('../partials/header',{ title : 'Catalog' }) %>
 
     <main class="container ">
       <div class="banner">
@@ -21,8 +21,17 @@
                     Belleza
                   </option>
                   <option value="">
-                    Tecno
-                  </option>
+                    Tecnología
+                  </option>  
+                  <option value="">
+                    Accesorios
+                  </option>  
+                  <option value="">
+                    Gastronomía
+                  </option>  
+                  <option value="">
+                    Indumentaria
+                  </option> 
                 </select>
                 <button
                 class="btn btn-outline-light"
@@ -222,8 +231,9 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.whatsapp.com/">
+                <i class="fa-brands fa-whatsapp"></i></a>
               </div>
             </div>
           </article>
@@ -231,6 +241,6 @@
       </section>
       </section>
     </main>
-<%- include('./partials/footer',{title :'catalog'}) %>
+<%- include('../partials/footer',{title :'catalog'}) %>
   </body>
 </html>

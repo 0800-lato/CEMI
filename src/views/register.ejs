@@ -1,11 +1,13 @@
  <!DOCTYPE html>
 	<html>
 	<%- include('./partials/head', { title: 'Registro' }) %>
-	<body>
-		<main> 
-			<section class="form-container">
+	<body class="register register__main__container">
+	<%- include('./partials/header',{title: 'Registro'}) %>
+		<main class="container">
+		
+			<section class="register__main__section " >
 				<h1>Registrá tu emprendimiento</h1>
-				<form class="access-form" action="/admin/revisar-registro" method="post"> 
+				<form class="access-form " action="/admin/revisar-registro" method="post"> 
 					<div class="field-group">
 						<label for="nombredelemprendimiento">Nombre del emprendimiento</label>		
 						<input type="text" id="nombredelemprendimiento" name="nombredelemprendimiento" required>
