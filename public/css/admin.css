@@ -120,8 +120,33 @@ padding-right: 1px;
   margin-right: 10px;
 }
 .admin--users_dashboard{
-  align-content: center;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+}
+
+.search__button{
+background-color: var(--color-SmokyBlue);
+color: white;
+border: none;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+ .search__button:hover {
+  background-color: var(--color-SalmonRed);
+  transform: scale(1.05); 
+}
+.admin--users_cards{
+  width:100%;
+  margin-top: 20px;
+  margin-bottom: 100px
+
+}
+.pagination{
+  margin-top: 200px;
 }
 .card--users{
   align-content: center;
@@ -167,6 +192,12 @@ body.admin   .btn:hover {
   background-color: var( --color-PurpleMariposa);
 
 }
+.card--title__down{
+  display: none;
+}
+.buttons--admin__users small{
+  display: none;
+}
 
 @media (min-width: 420px) {
   .admin--main{
@@ -200,9 +231,14 @@ margin-top: 0px;
     height: auto;
     width: auto;
     margin-right: 10px;
-  }
-  .card--structure{
 
+  }
+ 
+
+  
+  .card--structure{
+display: flex;
+justify-content: center;
   }
 
   .card--structure__buttons{
@@ -231,6 +267,33 @@ margin-left: 20px;
     padding-right: 2px;
     padding-left: 2px;
   }
+  .admin--users_dashboard nav{
+    margin-top: 10px;
+  }
+
+  .admin--users_dashboard nav input{
+    width: 300px;
+  }
+  .card--title__upper{
+    display: none;
+  }
+  .card--title__down{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+  }
+  
+  .users__buttons{
+    display: flex;
+margin-left: 120px;
+margin-left: auto;
+  }
+  .buttons--admin__users{
+   justify-content: flex-start;
+  }
+  .card--users--body_example img{
+    width: 60px;
+      }
 }
 
 @media (min-width: 768px){
@@ -262,5 +325,22 @@ margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .admin--users_cards{
+    width: 70%;
+    margin-bottom: 40px;
+  }
+  .admin--users_dashboard nav input{
+    width: 600px;
+  }
+  .buttons--admin__users small{
+    display: inline-block;
+  }
+
+  .card--users--body_example img{
+    width: 80px;
+      }
+  .pagination{
+    margin-top: 100px;
   }
 }
