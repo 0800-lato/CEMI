@@ -6,7 +6,32 @@
     <%- include('./partials/header',{ title : 'Listado de Usuarios' }) %>
    
     <main>
-        <h2>Listado de Usuarios</h2>
+      <div class="admin--bar">
+      <div class="admin--titleBar">
+    <h3 class="admin--title">Lista de usuarios</h3>
+    </div>
+    </div>
+       
+    <article class="card">
+      <div class="card--body_example">
+        <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg" class="img-fluid rounded-start" alt="...">
+      
+        <div class="card--structure">
+        <h5>[EmprendiXX]</h5>
+     
+        <div class="buttons--yesNo">
+      <button type="button" class="buttons__yes" data-bs-toggle="modal" data-bs-target="#Approved?">
+        <i class="fa fa-check" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="buttons__no" data-bs-toggle="modal" data-bs-target="#Approved?">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    
+      
+      </div>
+      </div>
+    </article>
         <nav class="navbar bg-body-tertiary" style="background-color: navajowhite"
             <div class="container-fluid">
               <form class="d-flex" role="search">

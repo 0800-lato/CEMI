@@ -1,7 +1,209 @@
-.admin{
-    background-color: var(--color-PearlWhite);
+.admin {
+background-color: var(--bs-body-bg);
 }
 
-.admin {
-background-color: var(--color-PearlWhite);
+.admin--titleBar{
+  background-color: var(--color-PurpleMariposa);
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.admin--title{
+    text-align: center;
+    color: white;
+    
+}
+
+.card{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.card--body_example{
+  background-color: white;
+  border: solid 1px rgb(179, 173, 173);
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+
+
+.card--structure{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.card--body_example img{
+  max-width: 98px;
+  max-height: 130px;
+  height: auto;
+  width: auto;
+  margin-right: 10px;
+}
+
+.card--body_example p{
+  margin-bottom: 5px;
+}
+
+.card--body_example h5{
+  margin-top: 2px;
+}
+
+.card--structure__buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  align-content: flex-start;
+  
+}
+.buttons--yesNo{
+
+}
+
+.buttons__yes{
+  background-color: var(--color-GreenApproved);
+  border: none;
+  color: white;
+  margin-right: 10px;
+
+}
+.buttons__yes i{
+  font-size: 1.4rem;
+  padding-top: 4px;
+  padding-right: 0px;
+  padding-left: 0px;
+
+}
+
+.buttons__no{
+  background-color: var(--color-RedDenied);
+  border: none;
+  color: white;
+  margin-right: 10px;
+}
+.buttons__no i{
+font-size: 1.4rem;
+padding-top: 4px;
+padding-left: 1px;
+padding-right: 1px;
+}
+
+body.admin .btn {
+  background-color: var(--color-SmokyBlue);
+  color: white;
+  border: none;
+  padding: 1px 10px;
+  border-radius: 25px; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 0px;
+  font-size: 0.8rem;
+}
+
+body.admin   .btn:hover {
+  background-color: var(--color-SalmonRed);
+  transform: scale(1.05); 
+}
+
+@media (min-width: 420px) {
+  .admin--main{
+
+  }
+  .admin--bar{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 0px;
+
+  }
+  .admin--titleBar{
+    width: 95%;
+    padding-top: 5px;
+  }
+
+  .admin--main ul{
+    max-width: 250px;
+    margin-top: 30px;
+  }
+  .card{
+    
+  }
+  .card--body_example{
+
+  }
+  .card--body_example img{
+    max-width: 98px;
+    max-height: 200px;
+    height: auto;
+    width: auto;
+    margin-right: 10px;
+  }
+  .card--structure{
+
+  }
+
+  .card--structure__buttons{
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  body.admin .btn{
+   margin-right: 20px;
+   padding: 1px 25px;
+   font-size: 1rem;
+  }
+  .buttons__yes{
+margin-left: 20px;
+  }
+  .buttons__yes i{
+font-size: 2rem;
+
+  }
+  .buttons__no{
+margin-left: 20px;
+
+  }
+
+  .buttons__no i{
+    font-size: 2rem;
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+}
+
+@media (min-width: 768px){
+  .admin--titleBar{
+    width: 85%;
+    padding-top: 5px;
+  }
+
+  body.admin   .tab-content{
+    width: 85%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    
+  }
+.admin-requests__options{
+  display: flex;
+  align-self: center;
+  margin-left: 0px;
+  width: 85%;
+}
+.admin--main ul{
+  width: 350px;
+  max-width: 350px;
+  margin-top: 30px;
+  background-color: var( --color-PurpleMariposa);
+
+}
+
+  .admin-requests__dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
