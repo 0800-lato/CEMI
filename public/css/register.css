@@ -24,6 +24,14 @@ h1 {
     padding-bottom: 10px;
 }
 
+body.register section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+}
+
 .field-group {
     margin-bottom: 20px;
 }
@@ -84,7 +92,7 @@ h1 {
 
 /* no me toma el efecto en Descripción */
 
-.register button{
+.register button[type="submit"], [type="reset"]{
     background-color: var(--color-SmokyBlue);
     color: white;
     border: none;
@@ -97,7 +105,7 @@ h1 {
     margin: 10px 5px;
 }
 
-.register button:hover, .btn:hover {
+.register button:hover[type="submit"], [type="reset"]{
     background-color: var(--color-PurpleMariposa);
     transform: scale(1.05);
 }

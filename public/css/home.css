@@ -60,4 +60,3 @@ body.home .btn + .btn {
     margin-left: 10px; 
 }
 
-/*elimine el @media de los buttoms por crear conflictos entre las clases del home y las demas vistas*/
