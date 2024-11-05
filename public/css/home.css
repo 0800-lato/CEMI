@@ -52,7 +52,7 @@ body.home  .btn {
 }
 
 body.home   .btn:hover {
-    background-color: var(--color-SalmonRed);
+    background-color: var(--color-RosaButterf);
     transform: scale(1.05); 
 }
 
