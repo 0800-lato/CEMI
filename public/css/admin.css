@@ -109,6 +109,11 @@ body.admin   .btn:hover {
   transform: scale(1.05); 
 }
 
+.admin--main ul{
+  background-color: var( --color-PurpleMariposa);
+
+}
+
 @media (min-width: 420px) {
   .admin--main{
 
@@ -197,8 +202,6 @@ margin-left: 20px;
   width: 350px;
   max-width: 350px;
   margin-top: 30px;
-  background-color: var( --color-PurpleMariposa);
-
 }
 
   .admin-requests__dashboard{
