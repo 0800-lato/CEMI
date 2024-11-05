@@ -1,7 +1,19 @@
 .admin {
 background-color: var(--bs-body-bg);
 }
+.admin-profile{
+  background-color: blueviolet;
+  color: white;
+  border-radius: 5px;
 
+  border: none;
+}
+
+.admin-header__cancel{
+  border: none;
+  background-color: var(--color-SalmonRed);
+  padding: 0px;
+}
 .admin--titleBar{
   background-color: var(--color-PurpleMariposa);
   border-radius: 10px;
@@ -119,6 +131,55 @@ padding-right: 1px;
   color: white;
   margin-right: 10px;
 }
+.admin--users_dashboard{
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+}
+
+.search__button{
+background-color: var(--color-SmokyBlue);
+color: white;
+border: none;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+ .search__button:hover {
+  background-color: var(--color-SalmonRed);
+  transform: scale(1.05); 
+}
+.admin--users_cards{
+  width:100%;
+  margin-top: 20px;
+  margin-bottom: 100px
+
+}
+.pagination{
+  margin-top: 200px;
+}
+.card--users{
+  align-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.card--users--body_example{
+  background-color: white;
+  border: solid 1px rgb(179, 173, 173);
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+}
+.card--users--body_example img{
+  width: 50px;
+}
+.admin-users{
+ 
+}
 
 body.admin .btn {
   background-color: var(--color-SmokyBlue);
@@ -142,6 +203,12 @@ body.admin   .btn:hover {
 .admin--main ul{
   background-color: var( --color-PurpleMariposa);
 
+}
+.card--title__down{
+  display: none;
+}
+.buttons--admin__users small{
+  display: none;
 }
 
 @media (min-width: 420px) {
@@ -176,9 +243,14 @@ margin-top: 0px;
     height: auto;
     width: auto;
     margin-right: 10px;
-  }
-  .card--structure{
 
+  }
+ 
+
+  
+  .card--structure{
+display: flex;
+justify-content: center;
   }
 
   .card--structure__buttons{
@@ -207,6 +279,33 @@ margin-left: 20px;
     padding-right: 2px;
     padding-left: 2px;
   }
+  .admin--users_dashboard nav{
+    margin-top: 10px;
+  }
+
+  .admin--users_dashboard nav input{
+    width: 300px;
+  }
+  .card--title__upper{
+    display: none;
+  }
+  .card--title__down{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+  }
+  
+  .users__buttons{
+    display: flex;
+margin-left: 120px;
+margin-left: auto;
+  }
+  .buttons--admin__users{
+   justify-content: flex-start;
+  }
+  .card--users--body_example img{
+    width: 60px;
+      }
 }
 
 @media (min-width: 768px){
@@ -239,4 +338,22 @@ margin-left: 20px;
     flex-direction: column;
     align-items: center;
   }
+  .admin--users_cards{
+    width: 70%;
+    margin-bottom: 40px;
+  }
+  .admin--users_dashboard nav input{
+    width: 600px;
+  }
+  .buttons--admin__users small{
+    display: inline-block;
+  }
+
+  .card--users--body_example img{
+    width: 80px;
+      }
+  .pagination{
+    margin-top: 100px;
+  }
+
 }

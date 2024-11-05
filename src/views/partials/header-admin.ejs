@@ -19,40 +19,51 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/"> Home </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/entrepreneurships/catalog"> Catalogo de emprendedoras </a>
+                  <a class="nav-link active" aria-current="page" href="/"> Inicio </a>
                 </li>
                 
-                <li class="nav-item">
-                  <a class="nav-link" href="https://cemi.org.ar/"> Nosotros </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/contact"> Contacto </a>
-                </li>
-              </ul>
-  
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/admin/users"> Listado de Usuarios </a>
+                  </li>
+                 
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/admin/requests"> Bandeja de Solicitudes </a>
+                    </li>
+                    
+                  </ul>
+               
   
             </div>
   
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" href="/admin/requests"> Bandeja de Solicitudes </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/admin/users"> Listado de Usuarios </a>
-                </li>
-               
-              </ul>
+            
 
   
           </div>
-
+        </button>
         </nav><div>
-            <button type="button" class="btn btn-outline-success">Admin</button>
+          <button class="admin-profile" type="button" data-bs-toggle="collapse"
 
-        <a class="nav-link active" href="/"><i class="fa-regular fa-circle-xmark"></i> Exit</a>
+              data-bs-target="#navbarAdminContent" aria-controls="navbarAdminContent" aria-expanded="false"
+              aria-label="Toggle navigation">Administrador
+              
+            </button>
+            <div class="collapse navbar-collapse" id="navbarAdminContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/"><i class="fa-solid fa-right-from-bracket"></i> Salir </a>
+                </li>
+                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <button class="admin-header__cancel" type="button" data-bs-toggle="collapse"
+
+                    data-bs-target="#navbarAdminContent" aria-controls="navbarAdminContent" aria-expanded="false"
+                    aria-label="Toggle navigation"> <i class="fa-regular fa-circle-xmark"></i> Cancelar </button>
+                  </li>
+                 
+                    
+                  </ul>
 
   
     </div>
