@@ -107,6 +107,12 @@ margin-left: 10px;
     color: var(--color-PearlWhite);
 }
 
+.fa-brands fa-instagram, .fa-brands fa-facebook-f{
+    color: #fff
+}
+
+/* verificar, tendrían que estar del mismo color que el resto de las cosas */
+
 @media (min-width: 768px) {
     footer {
         flex-direction: row;

@@ -4,13 +4,13 @@
 	<body class="register register__main__container">
 	<%- include('./partials/header',{title: 'Registro'}) %>
 		<main class="container">
-		
-			<section class="register__main__section " >
+			<section class="register__main__section" >
 				<h1>Registrá tu emprendimiento</h1>
-				<form class="access-form " action="/admin/revisar-registro" method="post"> 
+				<!-- lo ideal sería que esto le llegue al admin, pero redirija a la pagina de perfil de usuario -->
+				<form class="access-form " action="/admin/requests" method="post"> 
 					<div class="field-group">
 						<label for="nombredelemprendimiento">Nombre del emprendimiento</label>		
-						<input type="text" id="nombredelemprendimiento" name="nombredelemprendimiento" required>
+						<input type="text" id="nombredelemprendimiento" name="nombredelemprendimiento"  placeholder="Ingresá el nombre de tu emprendimiento" required>
 						<p class="form-text alert-hide">Obligatorio.</p>
 					</div>
 					
@@ -96,6 +96,3 @@
 		<%- include('./partials/footer') %>
 	</body>
 	</html>
-
-
-<!-- no sé si deberíamos redirigir esta información en el formulario al administrador:/ -->
