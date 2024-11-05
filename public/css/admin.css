@@ -1,7 +1,19 @@
 .admin {
 background-color: var(--bs-body-bg);
 }
+.admin-profile{
+  background-color: blueviolet;
+  color: white;
+  border-radius: 5px;
 
+  border: none;
+}
+
+.admin-header__cancel{
+  border: none;
+  background-color: var(--color-SalmonRed);
+  padding: 0px;
+}
 .admin--titleBar{
   background-color: var(--color-PurpleMariposa);
   border-radius: 10px;
@@ -343,4 +355,5 @@ margin-left: auto;
   .pagination{
     margin-top: 100px;
   }
+
 }
