@@ -3,35 +3,16 @@
     <%- include('./partials/head',{ title : 'Listado de Usuarios' }) %>
 
 <body class="admin">
-    <%- include('./partials/header',{ title : 'Listado de Usuarios' }) %>
+    <%- include('./partials/header-admin',{ title : 'Listado de Usuarios' }) %>
    
-    <main>
+    <main >
       <div class="admin--bar">
       <div class="admin--titleBar">
     <h3 class="admin--title">Lista de usuarios</h3>
     </div>
     </div>
        
-    <article class="card">
-      <div class="card--body_example">
-        <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg" class="img-fluid rounded-start" alt="...">
-      
-        <div class="card--structure">
-        <h5>[EmprendiXX]</h5>
-     
-        <div class="buttons--yesNo">
-      <button type="button" class="buttons__yes" data-bs-toggle="modal" data-bs-target="#Approved?">
-        <i class="fa fa-check" aria-hidden="true"></i>
-      </button>
-      <button type="button" class="buttons__no" data-bs-toggle="modal" data-bs-target="#Approved?">
-        <i class="fa fa-times" aria-hidden="true"></i>
-      </button>
-    </div>
-    
-      
-      </div>
-      </div>
-    </article>
+ 
         <nav class="navbar bg-body-tertiary" style="background-color: navajowhite"
             <div class="container-fluid">
               <form class="d-flex" role="search">
@@ -41,78 +22,77 @@
             </div>
           </nav>
 <section>
-    <article>
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2024/04/IMG-20240115-WA0016-355x250.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">[Emprendimiento Azul]</h5>
-              
-              <i class="fa-solid fa-pen"></i>
-              <i class="fa-solid fa-ban"></i>
-              <i class="fa-solid fa-trash-can"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      </article>
-      <article>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2024/04/IMG-20240115-WA0016-355x250.jpg" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">[Emprendimiento Celeste]</h5>
-                  
-                  <i class="fa-solid fa-pen"></i>
-                  <i class="fa-solid fa-ban"></i>
-                  <i class="fa-solid fa-trash-can"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          </article>
-          <article>
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2024/04/IMG-20240115-WA0016-355x250.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">[Emprendimiento Pastel]</h5>
-                      
-                      <i class="fa-solid fa-pen"></i>
-                      <i class="fa-solid fa-ban"></i>
-                      <i class="fa-solid fa-trash-can"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </article>
-              <article>
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2024/04/IMG-20240115-WA0016-355x250.jpg" class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">[Emprendimiento Cielo]</h5>
-                          
-                          <i class="fa-solid fa-pen"></i>
-                          <i class="fa-solid fa-ban"></i>
-                          <i class="fa-solid fa-trash-can"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  </article>
+  <article class="card">
+    <div class="card--body_example">
+      <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg" class="img-fluid rounded-start" alt="...">
+    
+      <div class="card--structure">
+      <h5>[EmprendiXX]</h5>
+   
+      <div class="buttons--admin__users">
+  
+    <button type="button" class="buttons__edit">
+    <i class="fa-solid fa-pen"></i>
+  </button>
+<button type="button" class="buttons__suspend" data-bs-toggle="modal" data-bs-target="">     
+<i class="fa-solid fa-ban"></i>
+</button> 
+<button type="button" class="buttons__delete" data-bs-toggle="modal" data-bs-target="#Approved?">
+    <i class="fa-solid fa-trash-can" aria-hidden="true"></i> </button>
+  </div>
+  
+    
+    </div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card--body_example">
+      <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg" class="img-fluid rounded-start" alt="...">
+    
+      <div class="card--structure">
+      <h5>[EmprendiXX]</h5>
+   
+      <div class="buttons--admin__users">
+  
+    <button type="button" class="buttons__edit">
+    <i class="fa-solid fa-pen"></i>
+  </button>
+<button type="button" class="buttons__suspend" data-bs-toggle="modal" data-bs-target="">     
+<i class="fa-solid fa-ban"></i>
+</button> 
+<button type="button" class="buttons__delete" data-bs-toggle="modal" data-bs-target="#Approved?">
+    <i class="fa-solid fa-trash-can" aria-hidden="true"></i> </button>
+  </div>
+  
+    
+    </div>
+    </div>
+  </article>
+  <article class="card">
+    <div class="card--body_example">
+      <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg" class="img-fluid rounded-start" alt="...">
+    
+      <div class="card--structure">
+      <h5>[EmprendiXX]</h5>
+   
+      <div class="buttons--admin__users">
+  
+    <button type="button" class="buttons__edit">
+    <i class="fa-solid fa-pen"></i>
+  </button>
+<button type="button" class="buttons__suspend" data-bs-toggle="modal" data-bs-target="">     
+<i class="fa-solid fa-ban"></i>
+</button> 
+<button type="button" class="buttons__delete" data-bs-toggle="modal" data-bs-target="#Approved?">
+    <i class="fa-solid fa-trash-can" aria-hidden="true"></i> </button>
+  </div>
+  
+    
+    </div>
+    </div>
+  </article>
+    
 </section>
 <nav aria-label="...">
     <ul class="pagination">
@@ -133,6 +113,5 @@
 </section>
     </main>
     <%- include('./partials/footer') %>
-
 </body>
 </html>
