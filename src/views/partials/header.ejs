@@ -1,49 +1,110 @@
 <header class="container-fluid">
-    
-    <nav class="navbar">
-        <div class="container d-flex">
+
+  <nav class="navbar">
+    <div class="container">
+
+
+      <a class="navbar-a " href="#">
+        <i class="fa-solid fa-right-to-bracket" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+          style="color: var(--color-PearlWhite)"></i></a>
+
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
 
 
 
-            <nav class="navbar navbar-expand-lg ">
-                <div class="container-fluid">
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/"> Home </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/register"> Sumate </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/about"> Nosotros </a>
-                            </li><li class="nav-item">
-                                <a class="nav-link" href="/contact"> Contacto </a>
-                            </li>
-                        </ul>
-
-
-                    </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/"> Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/entrepreneurships/catalog"> Catalogo de emprendedoras </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register"> Sumate </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://cemi.org.ar/"> Nosotros </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact"> Contacto </a>
+              </li>
+            </ul>
 
 
-
-
-                </div>
-            </nav>
+          </div>
 
 
 
-            
+
         </div>
-        <a class="navbar-a " href="#">
-            <i class="fa-solid fa-right-to-bracket" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                style="color: var(--color-PearlWhite)"></i></a>
+      </nav>
 
-    </nav>
+
+
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header d-flex align-items-center justify-content-center">
+            <h1 class="text-end" id="staticBackdropLabel">Iniciar sesión</h1>
+
+
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center">
+
+
+            <!-- formulario de registro REVISAR GUARADO DE DATOS-->
+            <form class="access-form" action="" method="get">
+
+              <section class="d-flex align-items-center justify-content-center">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email" value="" required>
+              </section>
+              <section class="d-flex align-items-center justify-content-center">
+                <label for="password"></label>
+                <input type="password" id="passsword" name="password" placeholder="password" value="" required>
+              </section>
+
+
+
+              <div class="field-group remember-me">
+                <input type="checkbox" id="remember-me" name="remember-me" value="">
+                <label for="remember-me">Recordarme</label>
+              </div>
+
+             
+              <button class="btn btn-primary" type="submit" name="send">Ingresar</button>
+
+              <a class="btn btn-primary" href="/register">
+                <i>Creá tu cuenta </i></a>
+
+
+              <a class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</a>
+          </div>
+          </section>
+          </form>
+
+
+          <!-- Finaliza form de registro-->
+
+
+        
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </nav>
 </header>
