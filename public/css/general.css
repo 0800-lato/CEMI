@@ -164,7 +164,7 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
     border-bottom: 2px solid var(--color-LipstickRed);
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
 }
 
 .field-group {
@@ -279,7 +279,7 @@ label[for="tyc"] {
     }
 
     button, .btn {
-        width: 100%;
+     
         margin-bottom: 10px;
     }
 
