@@ -8,16 +8,23 @@
 				<section class="register__main__section">
 					<h1 class="mb-3">Registrá tu emprendimiento</h1>
 					<!-- lo ideal sería que esto le llegue al admin, pero redirija a la pagina de perfil de usuario -->
-					<form class="row" action="/admin/requests" method="POST">
+					<form class="row"  method="POST">
 						<div class="col-12 col-md-6 ">
 							<div class="border rounded border-1 p-3">
 								<h5>Datos generales</h5>
 
 								<hr>
+								<div class="field-group col-12">
+									<label for="nombredelemprendimiento">Nombre de la emprendedora</label>
+									<input type="text" id="name" name="name"
+										placeholder="Ingresá tu nombre">
+									<p class="form-text alert-hide">Obligatorio.</p>
+								</div>
+
 
 								<div class="field-group col-12">
 									<label for="nombredelemprendimiento">Nombre del emprendimiento</label>
-									<input type="text" id="nombredelemprendimiento" name="nombredelemprendimiento"
+									<input type="text" id="entrepeneurshipname" name="entrepeneurshipname"
 										placeholder="Ingresá el nombre de tu emprendimiento">
 									<p class="form-text alert-hide">Obligatorio.</p>
 								</div>
