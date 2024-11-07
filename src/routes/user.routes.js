@@ -9,6 +9,8 @@ const {
   updateProfile,
   logout,
 } = require("../controllers/userController");
+const registerValidator = require('../validator/registerValidator')
+
 
 // /users
 router
