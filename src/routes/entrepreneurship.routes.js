@@ -2,7 +2,7 @@ const express = require ("express");
 const router =  express.Router();
 const {catalog,destroy,detail,add,edit,create,filter,search, update} = require('../controllers/entrepreneurshipController')
 
-// /entrepreneurship
+// /entrepreneurships
 
 router
     .get("/catalog", catalog)
