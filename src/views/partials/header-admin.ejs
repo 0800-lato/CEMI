@@ -1,127 +1,40 @@
 <header class="container-fluid">
-
-    <nav class="navbar">
-      <div class="container">
-  
-  
-        
-  
-        <nav class="navbar navbar-expand-lg ">
-          <div class="container-fluid">
-  
-  
-  
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/"> Inicio </a>
-                </li>
-                
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/admin/users"> Listado de Usuarios </a>
-                  </li>
-                 
-                    <li class="nav-item">
-                      <a class="nav-link active" href="/admin/requests"> Bandeja de Solicitudes </a>
-                    </li>
-                    
-                  </ul>
-               
-  
-            </div>
-  
-            
-
-  
-          </div>
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-        </nav><div>
-          <button class="admin-profile" type="button" data-bs-toggle="collapse"
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="/admin">
+                Bandeja de Solicitudes
+              </a>
+            </li>
 
-              data-bs-target="#navbarAdminContent" aria-controls="navbarAdminContent" aria-expanded="false"
-              aria-label="Toggle navigation">Administrador
-              
-            </button>
-            <div class="collapse navbar-collapse" id="navbarAdminContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/"><i class="fa-solid fa-right-from-bracket"></i> Salir </a>
-                </li>
-                
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <button class="admin-header__cancel" type="button" data-bs-toggle="collapse"
-
-                    data-bs-target="#navbarAdminContent" aria-controls="navbarAdminContent" aria-expanded="false"
-                    aria-label="Toggle navigation"> <i class="fa-regular fa-circle-xmark"></i> Cancelar </button>
-                  </li>
-                 
-                    
-                  </ul>
-
-  
-    </div>
-      </div>
-  
-      <!-- Modal -->
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header d-flex align-items-center justify-content-center">
-              <h1 class="text-end" id="staticBackdropLabel">Iniciar sesión</h1>
-  
-  
-            </div>
-            <div class="modal-body d-flex align-items-center justify-content-center">
-  
-  
-              <!-- formulario de registro REVISAR GUARADO DE DATOS-->
-              <form class="access-form" action="" method="get">
-  
-                <section class="d-flex align-items-center justify-content-center">
-                  <label for="email"></label>
-                  <input type="email" id="email" name="email" placeholder="Email" value="" required>
-                </section>
-                <section class="d-flex align-items-center justify-content-center">
-                  <label for="password"></label>
-                  <input type="password" id="passsword" name="password" placeholder="password" value="" required>
-                </section>
-  
-  
-  
-                <div class="field-group remember-me">
-                  <input type="checkbox" id="remember-me" name="remember-me" value="">
-                  <label for="remember-me">Recordarme</label>
-                </div>
-  
-               
-                <button class="btn btn-primary" type="submit" name="send">Ingresar</button>
-  
-                <a class="btn btn-primary" href="/register">
-                  <i>Creá tu cuenta </i></a>
-  
-  
-                <a class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</a>
-            </div>
-            </section>
-            </form>
-  
-  
-            <!-- Finaliza form de registro-->
-  
-  
-          
-          </div>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin/users"> Listado de Usuarios </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/"> Ir al Home </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/"> Salir </a>
+            </li>
+          </ul>
         </div>
       </div>
-      </div>
-  
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
