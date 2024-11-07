@@ -1,19 +1,22 @@
 const { validationResult } = require("express-validator");
 const { getData, storeData } = require("../data");
 const {getOrderItems, getPagedItems} = require("../helpers");
-
-
+let entrepreneurshipsFilter;
+let keyword;
+let category;
 
 
 module.exports = {
     catalog : (req,res) => {
-        const entrepreneurships = getData("entrepreneurships.json");
+        const entrepreneurships = entrepreneurshipsFilter ? entrepreneurshipsFilter : getData("entrepreneurships.json");
         const totalPages = Math.ceil(entrepreneurships.length / 12);
         const page = req.query.page || 1
         return  res.render('entrepreneurship/catalog', {
           entrepreneurships: getPagedItems(entrepreneurships, page, 12),
           totalPages,
-          page
+          page,
+          keyword,
+          category
         });
        
     },
@@ -21,18 +24,30 @@ module.exports = {
 
     },
     search : (req,res) => {
-
-    },
-    filter : (req,res) => {
-        
         const entrepreneurships = getData("entrepreneurships.json");
-        const entrepreneurshipsFilter = entrepreneurships.filter (entrepreneurship => entrepreneurship.category === req.query.category )
-        const totalPages = Math.ceil(entrepreneurships.length / 12);
+        keyword = req.query.keyword
+        entrepreneurshipsFilter = entrepreneurships.filter(entrepreneurship => entrepreneurship.title.toLowerCase().includes(keyword.toLowerCase()))
+        const totalPages = Math.ceil(entrepreneurshipsFilter.length / 12);
         const page = req.query.page || 1
         return  res.render('entrepreneurship/catalog', {
           entrepreneurships: getPagedItems(entrepreneurshipsFilter, page, 12),
           totalPages,
-          page
+          page,
+          keyword
+        });
+    },
+    filter : (req,res) => {
+        
+        const entrepreneurships = getData("entrepreneurships.json");
+        category= req.query.category;
+        entrepreneurshipsFilter = entrepreneurships.filter (entrepreneurship => entrepreneurship.category === category )
+        const totalPages = Math.ceil(entrepreneurshipsFilter.length / 12);
+        const page = req.query.page || 1
+        return  res.render('entrepreneurship/catalog', {
+          entrepreneurships: getPagedItems(entrepreneurshipsFilter, page, 12),
+          totalPages,
+          page,
+          category
         });
     },
     add : (req,res) => {
