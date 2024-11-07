@@ -24,7 +24,16 @@ module.exports = {
 
     },
     filter : (req,res) => {
-
+        
+        const entrepreneurships = getData("entrepreneurships.json");
+        const entrepreneurshipsFilter = entrepreneurships.filter (entrepreneurship => entrepreneurship.category === req.query.category )
+        const totalPages = Math.ceil(entrepreneurships.length / 12);
+        const page = req.query.page || 1
+        return  res.render('entrepreneurship/catalog', {
+          entrepreneurships: getPagedItems(entrepreneurshipsFilter, page, 12),
+          totalPages,
+          page
+        });
     },
     add : (req,res) => {
         return res.render('entrepreneurship/add')
