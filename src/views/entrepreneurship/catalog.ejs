@@ -10,7 +10,6 @@
       </div>
 
       <!--buscador de categorias-->
-      <section>
         <nav class="catalog__main__section__navbar">
           <div class="row">
             <div class="col-12 col-md-6">
@@ -67,179 +66,63 @@
           </div>
         </nav>
         <section  class="catalog__main__section">
-        <section class="row row-gap-4 mt-4">
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+          <section class="row row-gap-2 position-relative" style="padding-bottom: 100px;"><!-- Contenedor de todos los productos -->
+					
+            <% entrepreneurships.forEach(({id,links, image, title, category}) => { %>
+              <div class="col-12 col-md-6">
+                <article class="card shadow">
+                  <div class="card-body ">
+                    <div class="row">
+                      <div class="col-12 col-lg-4 d-flex justify-content-center align-items-start">
+                        <img class="img-fluid" style="height: 300px; object-fit: contain;"                  src="<%= /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/.test(image) ? image : `/images/${image}`%>"
+                        alt="">
+                      </div>
+                      <div class="col-12 col-lg-8 p-2">
+                       <h6 class="category"><%= category %></h6> <h2 class="name"><%= title %> </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><a class="links" href="/entrepreneurships<%= links%>"> 
+                          <i class="fa-brands fa-<%= links == "Facebook" ? 'facebook' : links == "Instagram" ? 'instagram' : 'linkedin' %>"></i> </a>
+                        <article>
+                        <a class="more" href="/entrepreneurships/<%= id %>">ver más</a></article>
+                      </div>
+  
+                    
+                    </div>
+                    
+                  </div><!-- Contenedor de cada producto -->
+                  
+                </article>
               </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i> </a>
-                <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-          <article class="col-12 col-md-6 col-lg-4">
-            <div class="card shadow">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="https://www.instagram.com/puerta18/"<i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.whatsapp.com/">
-                <i class="fa-brands fa-whatsapp"></i></a>
-              </div>
-            </div>
-          </article>
-        </section>
+              
+            <% }) %>
+            <nav class="position-absolute bottom-0 justify-content-center d-flex">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+               <% for( let i = 1; i <= totalPages; i++ ) { %>
+                <li class="page-item <%= page == i && 'active' %>"><a class="page-link" href="/entrepreneurships/catalog?page=<%= i %>"><%= i %></a></li>
+      
+               <% } %>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          
+          </section>
+      
+        
+    
+
       </section>
-      </section>
+
+
+ 
+     
     </main>
 <%- include('../partials/footer',{title :'catalog'}) %>
   </body>

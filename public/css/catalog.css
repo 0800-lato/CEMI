@@ -15,7 +15,7 @@
     font-size: 2rem;
 }
 .catalog__main__section{
-    margin: 0px 15px 30px;
+    margin: 0px 15px;
 }
 
 .catalog__main__container{
@@ -44,13 +44,6 @@
     margin-bottom: 20px;
 }
 
-
-/* falta ajustar posicion de las tarjetas*/
-.div_cards {
-
+.catalog__main__section a{
+    text-decoration: none;
 }
-.div_card{
-
-}
-
-
