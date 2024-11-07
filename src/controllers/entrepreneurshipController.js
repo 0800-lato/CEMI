@@ -1,6 +1,21 @@
+const { validationResult } = require("express-validator");
+const { getData, storeData } = require("../data");
+const {getOrderItems, getPagedItems} = require("../helpers");
+
+
+
+
 module.exports = {
     catalog : (req,res) => {
-        return res.render('entrepreneurship/catalog')
+        const entrepreneurships = getData("entrepreneurships.json");
+        const totalPages = Math.ceil(entrepreneurships.length / 12);
+        const page = req.query.page || 1
+        return  res.render('entrepreneurship/catalog', {
+          entrepreneurships: getPagedItems(entrepreneurships, page, 12),
+          totalPages,
+          page
+        });
+       
     },
     detail : (req,res) => {
 
