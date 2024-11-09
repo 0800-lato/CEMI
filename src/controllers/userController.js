@@ -5,7 +5,11 @@
 
 module.exports = {
   register : (req,res) => {
-      return res.render('users/register')
+    const categories = getData("categories.json");
+
+    return res.render("users/register", {
+      categories,
+    });
   },
   processRegister : (req,res) => {
 
@@ -63,7 +67,13 @@ module.exports = {
 
   },
   profile : (req,res) => {
-      return res.render('profile')
+    const users = getData("users.json");
+    return res.render("users/user-profile", {
+      user: users[0],
+    });
+  },
+  editProfile : (req,res) => {
+    return res.render("users/edit-profile")
   },
   updateProfile : (req,res) => {
     return res.render('profile')

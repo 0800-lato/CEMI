@@ -58,7 +58,8 @@ module.exports = {
 
     },
     edit : (req,res) => {
-        return res.render('entrepreneurship/edit')
+      const categories = getData("categories.json");
+      return res.render("entrepreneurship/edit", { categories });
 
     },
     update : (req,res) => {

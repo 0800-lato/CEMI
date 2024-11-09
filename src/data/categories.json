@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Belleza"
+  },
+  {
+    "id": 2,
+    "name": "Tecnología"
+  },
+  {
+    "id": 3,
+    "name": "Bazar"
+  },
+  {
+    "id": 4,
+    "name": "Accesorios"
+  },
+  {
+    "id": 5,
+    "name": "Gastronomía"
+  },
+  {
+    "id": 6,
+    "name": "Indumentaria"
+  }
+]
