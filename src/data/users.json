@@ -3,12 +3,15 @@
     "id": 1,
     "name": "Méryl",
     "surname": "Mapplebeck",
-    "document": "834-23-8452",
     "email": "bmapplebeck0@about.com",
     "country": "Poland",
     "phone": "558-740-6998",
     "photo": "http://dummyimage.com/200x200.png/ff4444/ffffff",
-    "username": "cmapplebeck0",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "oZ6\"P1?1'C",
     "role": "user"
   },
@@ -16,12 +19,15 @@
     "id": 2,
     "name": "Eléonore",
     "surname": "Berford",
-    "document": "512-70-4414",
     "email": "mberford1@surveymonkey.com",
     "country": "Mauritius",
     "phone": "835-193-8269",
     "photo": "http://dummyimage.com/200x200.png/ff4444/ffffff",
-    "username": "fberford1",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "xW0&A<|+/#aJ",
     "role": "user"
   },
@@ -29,12 +35,15 @@
     "id": 3,
     "name": "Gaëlle",
     "surname": "Ullrich",
-    "document": "883-73-4499",
     "email": "gullrich2@networksolutions.com",
     "country": "Philippines",
     "phone": "435-594-2191",
     "photo": "http://dummyimage.com/200x200.png/dddddd/000000",
-    "username": "kullrich2",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "hP0>HUEMw6xhp",
     "role": "user"
   },
@@ -42,12 +51,15 @@
     "id": 4,
     "name": "Östen",
     "surname": "McGrail",
-    "document": "833-61-1042",
     "email": "dmcgrail3@google.es",
     "country": "Peru",
     "phone": "809-183-4217",
     "photo": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
-    "username": "amcgrail3",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "pO2'oq_PIL.%M",
     "role": "user"
   },
@@ -55,12 +67,15 @@
     "id": 5,
     "name": "Publicité",
     "surname": "McGillreich",
-    "document": "151-89-8213",
     "email": "cmcgillreich4@dot.gov",
     "country": "Syria",
     "phone": "351-764-3534",
     "photo": "http://dummyimage.com/200x200.png/dddddd/000000",
-    "username": "rmcgillreich4",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "yT9!G+!g)u9p?i=",
     "role": "user"
   },
@@ -68,12 +83,15 @@
     "id": 6,
     "name": "Béatrice",
     "surname": "Lethby",
-    "document": "124-73-0681",
     "email": "klethby5@noaa.gov",
     "country": "China",
     "phone": "119-920-6911",
     "photo": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
-    "username": "clethby5",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "hW7`}EX#rE",
     "role": "user"
   },
@@ -81,12 +99,15 @@
     "id": 7,
     "name": "Véronique",
     "surname": "Swainsbury",
-    "document": "581-67-7677",
     "email": "tswainsbury6@so-net.ne.jp",
     "country": "China",
     "phone": "306-532-8045",
     "photo": "http://dummyimage.com/200x200.png/ff4444/ffffff",
-    "username": "gswainsbury6",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "rN0__q.Lj",
     "role": "user"
   },
@@ -94,12 +115,15 @@
     "id": 8,
     "name": "Rachèle",
     "surname": "Scallon",
-    "document": "831-91-3641",
     "email": "ascallon7@marketwatch.com",
     "country": "Peru",
     "phone": "517-719-5730",
     "photo": "http://dummyimage.com/200x200.png/cc0000/ffffff",
-    "username": "rscallon7",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "nB7`fDgtcA$>",
     "role": "user"
   },
@@ -107,12 +131,15 @@
     "id": 9,
     "name": "Aimée",
     "surname": "Vane",
-    "document": "172-72-8230",
     "email": "avane8@surveymonkey.com",
     "country": "Russia",
     "phone": "977-401-4613",
     "photo": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
-    "username": "jvane8",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "wR6<A)UXsGZO",
     "role": "user"
   },
@@ -120,12 +147,15 @@
     "id": 10,
     "name": "Marie-françoise",
     "surname": "Osbidston",
-    "document": "439-48-5946",
     "email": "mosbidston9@seesaa.net",
     "country": "Nigeria",
     "phone": "522-548-9607",
     "photo": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
-    "username": "mosbidston9",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "pD2!L#1?@Z`'`",
     "role": "user"
   },
@@ -133,12 +163,15 @@
     "id": 11,
     "name": "Marie-françoise",
     "surname": "Vince",
-    "document": "135-23-2957",
     "email": "gvincea@uiuc.edu",
     "country": "China",
     "phone": "436-897-8494",
     "photo": "http://dummyimage.com/200x200.png/5fa2dd/ffffff",
-    "username": "cvincea",
+    "networks": [
+      "https://ar.linkedin.com/",
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
     "password": "sK6_I#<qhGE!IU,",
     "role": "user"
   },
