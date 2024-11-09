@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const entrepreneuship = new mongoose.Schema({
+const entrepreneushipSchema = new mongoose.Schema({
   name: String,
   description: String,
   profileImage: String,
@@ -16,4 +16,4 @@ const entrepreneuship = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Entrepreneuship", entrepreneuship);
+module.exports = mongoose.model("Entrepreneuship", entrepreneushipSchema);

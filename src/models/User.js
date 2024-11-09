@@ -10,6 +10,8 @@ const userSchema = new mongoose.Schema({
   photo: String,
   networks: Array,
   role: String,
+  validate: Boolean,
+  token: String,
 });
 
 module.exports = mongoose.model("User", userSchema);

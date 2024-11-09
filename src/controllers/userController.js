@@ -1,85 +1,112 @@
- const {validationResult} = require('express-validator');
- const {hashSync} = require('bcryptjs');
- const {getData, storeData} = require('../data');
+const { validationResult } = require("express-validator");
+const { hashSync } = require("bcryptjs");
+const { getData, storeData } = require("../data");
 
+/* implementa base de datos */
+const Category = require("../models/Category.js");
+const User = require("../models/User.js");
+const EntrepreneurShip = require("../models/EntrepreneurShip.js");
 
 module.exports = {
-  register : (req,res) => {
-    const categories = getData("categories.json");
+  register: async (req, res) => {
+    const categories = await Category.find();
 
     return res.render("users/register", {
       categories,
     });
   },
-  processRegister : (req,res) => {
+  processRegister: async (req, res) => {
+    /* obtengo las validaciones */
+    const errors = validationResult(req);
 
-      const errors = validationResult(req);
-      const {name, email, entrepeneurshipname, password, description} = req.body;
-      const users = getData('users.json');
+    /* obtengo los datos de la emprendedora */
+    const { name, surname, country, email, phone, password, networks } =
+      req.body;
 
-      if(errors.isEmpty()){
-          const newUser = {
-              id: +users[users.length - 1].id + 1,
-              name,
-              entrepeneurshipname,
-              email,
-              password : hashSync(password, 12),
-              description,
-              rol : 'user'
-          }
+    /* obtengo los datos del emprendimiento */
+    const {
+      entrepeneurshipname,
+      description,
+      category,
+      profileImage,
+      coverImage,
+    } = req.body;
 
-          users.push(newUser);
+    if (errors.isEmpty()) {
+      const newUser = new User({
+        name,
+        surname,
+        email,
+        phone,
+        country,
+        password: hashSync(password, 12),
+        networks,
+        role: "user",
+        validate: false,
+      });
 
-          storeData(users, 'users.json')
-          return res.redirect('/')
-      }else {
-          return res.render('register',{
-              old : req.body,
-              errors : errors.mapped()
-          })
-      }
+      const user = await newUser.save();
+
+      const newEntrepreneurship = new EntrepreneurShip({
+        name: entrepeneurshipname,
+        description,
+        profileImage,
+        coverImage,
+        active: false,
+        category,
+        user,
+      });
+
+      await newEntrepreneurship.save();
+
+      return res.redirect("/");
+    } else {
+      const categories = await Category.find();
+
+      return res.render("users/register", {
+        categories,
+        old: req.body,
+        errors: errors.mapped(),
+      });
+    }
   },
-  login : (req,res) => {
-
-      return res.render('login')
+  login: (req, res) => {
+    return res.render("login");
   },
-  processLogin : (req,res) => {
-      const users = getData('users.json');
-      const {email, pass} = req.body;        
+  processLogin: (req, res) => {
+    const users = getData("users.json");
+    const { email, pass } = req.body;
 
-      const user = users.find(user => user.email == email)
-      
-      if(user && compareSync(pass, user.password)) {
+    const user = users.find((user) => user.email == email);
 
-          req.session.userLogin = {
-              id : user.id,
-              name : user.name,
-              rol : user.rol
-          }
+    if (user && compareSync(pass, user.password)) {
+      req.session.userLogin = {
+        id: user.id,
+        name: user.name,
+        rol: user.rol,
+      };
 
-          return user.rol == "admin" ? res.redirect('/admin') : res.redirect("/")
-      }else {
-          return res.render('login',{
-              msg : "Credenciales inválidas"
-          })
-      }
-            
-
+      return user.rol == "admin" ? res.redirect("/admin") : res.redirect("/");
+    } else {
+      return res.render("login", {
+        msg: "Credenciales inválidas",
+      });
+    }
   },
-  profile : (req,res) => {
+  profile: (req, res) => {
     const users = getData("users.json");
     return res.render("users/user-profile", {
       user: users[0],
     });
   },
-  editProfile : (req,res) => {
-    return res.render("users/edit-profile")
+  editProfile: (req, res) => {
+    return res.render("users/edit-profile");
   },
-  updateProfile : (req,res) => {
-    return res.render('profile')
-},
-  logout : (req,res) =>{
-      req.session.destroy()
-      return res.redirect('/')
-  }
-} 
+  updateProfile: (req, res) => {
+    return res.render("profile");
+  },
+  logout: (req, res) => {
+    req.session.destroy();
+    return res.redirect("/");
+  },
+};
