@@ -48,6 +48,7 @@ body.register section {
 
 
 .field-group input,
+.field-group select,
 .field-group textarea {
     width: 100%;
     padding: 10px;
