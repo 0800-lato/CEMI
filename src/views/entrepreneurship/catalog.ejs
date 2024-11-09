@@ -70,27 +70,38 @@
           <section class="row row-gap-2 position-relative" style="padding-bottom: 100px;"><!-- Contenedor de todos los productos -->
             <% if (entrepreneurships.length) { %>
               <h5><%= locals.keyword ? keyword : locals.category ? category : "Todas las emprendedoras" %></h5>
-              <% entrepreneurships.forEach(({id,links, image, title, category}) => { %>
+              <% entrepreneurships.forEach(({id,name, description,links, image, title, category, user}) => { %>
                 <div class="col-12 col-md-6">
                   <article class="card shadow">
                     <div class="card-body ">
                       <div class="row">
                         <div class="col-12 col-lg-4 d-flex justify-content-center align-items-start">
-                          <img class="img-fluid" style="height: 300px; object-fit: contain;"                  src="<%= /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/.test(image) ? image : `/images/${image}`%>"
+                          <img class="img-fluid" style="height: 300px; object-fit: contain;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_AVFJwi086bFy31ygcD6uTfwSnRBiIlRv0g&s"
                           alt="">
                         </div>
                         <div class="col-12 col-lg-8 p-2">
-                         <h6 class="category"><%= category %></h6> <h2 class="name"><%= title %> </h2>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><a class="links" href="/entrepreneurships<%= links%>"> 
-                            <i class="fa-brands fa-<%= links == "Facebook" ? 'facebook' : links == "Instagram" ? 'instagram' : 'linkedin' %>"></i> </a>
-                          <article>
-                          <a class="more" href="/entrepreneurships/<%= id %>">ver más</a></article>
+                         <h6 class="category"><%= category.name %></h6> <h2 class="name"><%= name %> </h2>
+                          <p>
+                          <%= description %>
+                          </p>
+                          <div class="d-flex gap-2">
+                            <% user.networks.forEach(net => { %>
+                              <a class="links" href="/entrepreneurships<%= links%>"> 
+                                <i class="fa-brands fa-<%= net.toLowerCase().includes('facebook') ? 'facebook' : net.toLowerCase().includes('instagram') ? 'instagram' : 'linkedin' %>"></i> </a>
+                            <% }) %>
+                          </div>
+                          <a class="more" href="/entrepreneurships/detail/<%= id %>">ver más</a></article>
+
+                        </div>
+                      </div>
+
+                         
+                         
                         </div>
     
                       
-                      </div>
                       
-                    </div><!-- Contenedor de cada producto -->
+                    </div>
                     
                   </article>
                 </div>

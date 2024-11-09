@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
   photo: String,
   networks: Array,
   role: String,
-  validate: Boolean,
+  validated: Boolean,
   token: String,
 });
 

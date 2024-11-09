@@ -40,7 +40,7 @@ module.exports = {
         phone,
         country,
         password: hashSync(password, 12),
-        networks,
+        networks: networks.filter((net) => net != ""),
         role: "user",
         validate: false,
       });
@@ -54,7 +54,7 @@ module.exports = {
         coverImage,
         active: false,
         category,
-        user,
+        user: user._id,
       });
 
       await newEntrepreneurship.save();
