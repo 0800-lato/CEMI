@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head', { title: 'Registro' }) %>
+
+	<body class="register register__main__container">
+		<%- include('../partials/header',{title: 'Actualizá tus datos' }) %>
+			<main class="container">
+				<section class="register__main__section" style="max-width: 720px; margin: 30px auto;">
+					<h1 class="mb-3">Actualizá tus datos de contacto</h1>
+					<form class="row"  method="POST">
+						<div class="col-12">
+							<div class="border rounded border-1 p-3">
+								<h5>Datos personales</h5>
+
+								<hr>
+								<div class="row">
+								<div class="field-group col-12 col-md-6">
+									<label for="name">Nombre</label>
+									<input type="text" id="name" name="name" disabled>
+								</div>
+
+
+								<div class="field-group col-12 col-md-6">
+									<label for="surname">Apellido</label>
+									<input type="text" id="surname" name="surname"
+                                    disabled>
+								</div>
+								<div class="field-group col-12">
+									<label for="country">País de origen</label>
+									<select name="country" id="country" class="form-select" disabled>
+										<option value="Argentina">Argentina</option>
+										<option value="Brasil">Brasil</option>
+										<option value="Colombia">Colombia</option>
+										<option value="Venezuela">Venezuela</option>
+									</select>
+								</div>
+								<div class="field-group col-12 col-md-6">
+									<label for="email">Email</label>
+									<input type="email" id="email" name="email" placeholder="Ingresá tu email">
+                                    <p class="form-text alert-hide">Obligatorio.</p>
+
+								</div>
+								<div class="field-group col-12 col-md-6">
+									<label for="phone">Telefono</label>
+									<input type="text" id="phone" name="phone"
+										placeholder="Ingresá número de contacto">
+									<p class="form-text alert-hide">Obligatorio.</p>
+								</div>
+								
+									<h5 class="form-label">Redes sociales</h5>
+									<hr>
+									<div class="row">
+										<div class="field-group col-12 col-md-6">
+											<label for="linkedin">LinkedIn</label>
+											<input type="url" id="linkedin" name="networks"
+												placeholder="Enlace a tu perfil de LinkedIn">
+										</div>
+
+										<div class="field-group col-12 col-md-6">
+											<label for="instagram">Instagram</label>
+											<input type="url" id="instagram" name="networks"
+												placeholder="Enlace a tu perfil de Instagram">
+										</div>
+
+										<div class="field-group col-12 col-md-6">
+											<label for="facebook">Facebook</label>
+											<input type="url" id="facebook" name="networks"
+												placeholder="Enlace a tu perfil de Facebook">
+										</div>
+									</div>
+
+							</div>
+							
+							</div>
+
+                            <div class="col-12">
+								<div class="d-flex align-items-center justify-content-end">
+								
+									<button type="submit">Guardar cambios</button>
+								</div>
+
+
+							</div>
+						</div>
+				
+
+
+
+
+					</form>
+				</section>
+			</main>
+			<%- include('../partials/footer') %>
+	</body>
+
+</html>

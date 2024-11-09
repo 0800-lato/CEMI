@@ -1,17 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar emprendimiento</title>
-</head>
-<body>
-    <h1>
-        Editar emprendimiento
-    </h1>
-    <hr>
-    <form action="">
-        
-    </form>
-</body>
+<html>
+<%- include('../partials/head', { title: 'Registro' }) %>
+
+	<body class="register register__main__container">
+		<%- include('../partials/header',{title: 'Registro' }) %>
+			<main class="container">
+				<section class="register__main__section" style="max-width: 720px; margin: 30px auto;">
+					<h1 class="mb-3">Actualizá los datos de tu emprendimiento</h1>
+					<!-- lo ideal sería que esto le llegue al admin, pero redirija a la pagina de perfil de usuario -->
+					<form class="row"  method="POST">
+						<div class="col-12">
+							<div class="row">
+								<div class="col-12 border rounded border-1 p-3 mb-3">
+									<h5>Tu emprendimiento</h5>
+									<hr>
+								<div class="field-group col-12">
+									<label for="entrepeneurshipname">Nombre</label>
+									<input type="text" id="entrepeneurshipname" name="entrepeneurshipname"
+										placeholder="Ingresá el nombre de tu emprendimiento">
+									<p class="form-text alert-hide">Obligatorio.</p>
+								</div>
+								<div class="field-group col-12">
+									<label for="description" class="form-label">Descripción</label>
+									<textarea style="resize: none;" name="description" class="form-control"
+										id="description" rows="3"></textarea>
+									<small id="description-error" class="text-danger ms-2" hidden>Error al cargar la
+										información
+										del
+										emprendimiento</small>
+								</div>
+							</div>
+
+								<div class="col-12 border rounded border-1 p-3 mb-3">
+									<h5>Categoría de tu emprendimiento</h5>
+									<hr>
+									<div class="row gap-2">
+										<% categories.forEach(category => { %>
+											<div class="col-12 col-md-3">
+												<div class="form-check">
+													<input class="form-check-input" type="radio" value="<%= category.id %>"
+														id="<%= category.id + category.name %>" name="category">
+													<label class="form-check-label" for="<%= category.id + category.name %>">
+														<%= category.name %>
+													</label>
+												</div>
+											</div>
+										<% }) %>
+									
+
+									
+									</div>
+
+								</div>
+							
+								<div class="col-12 border rounded border-1 p-3 mb-3">
+									<h5>Imágenes</h5>
+									<hr>
+									<div class="row">
+										<div class="field-group col-12 col-md-6">
+											<label for="image-main">Imagen de perfil</label>
+											<input name="image" type="file" class="form-control" id="image-main">
+											<small id="image-error" class="text-danger ms-2" hidden>Error al cargar la
+												imagen</small>
+										</div>
+
+										<div class="field-group col-12 col-md-6">
+											<label for="image-additional">Imagen de portada</label>
+											<input name="image-additional" type="file" class="form-control"
+												id="image-additional">
+											<small id="image-error" class="text-danger ms-2" hidden>Error al cargar la
+												imagen</small>
+										</div>
+									</div>
+
+								</div>
+
+
+
+
+							</div>
+							<div class="col-12">
+								<div class="d-flex align-items-center justify-content-end">
+									
+                                    
+									<button type="submit">Guardar cambios</button>
+								</div>
+
+
+							</div>
+
+						</div>
+
+
+
+
+					</form>
+				</section>
+			</main>
+			<%- include('../partials/footer') %>
+	</body>
+
 </html>
+
+
+<!-- hay que pensar en la validación de datos de mail, xq sino cualquiera puede usar otro mail para registrarse -->
