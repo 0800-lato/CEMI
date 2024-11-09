@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<%- include('./partials/head', { title: 'Perfil de Usuario' }) %>
+<%- include('../partials/head', { title: 'Perfil de Usuario' }) %>
 <body>
     <main> 
         <section class="profile-container">
@@ -20,7 +20,7 @@
                 </div>
                 <h3>Categoría de tu emprendimiento</h3>
                 <ul class="categories">
-                    <% user.categorias.forEach(function(categoria) { %>
+                    <% user.categorias?.forEach(function(categoria) { %>
                         <li><%= categoria %></li>
                     <% }) %>
                 </ul>
@@ -34,13 +34,13 @@
                 </div>
                 <h3>Redes sociales</h3>
                 <div class="social-links">
-                    <% if (usuario.linkedin) { %>
+                    <% if (user.linkedin) { %>
                         <p><a href="<%= user.linkedin %>">LinkedIn</a></p>
                     <% } %>
-                    <% if (usuario.instagram) { %>
+                    <% if (user.instagram) { %>
                         <p><a href="<%= user.instagram %>">Instagram</a></p>
                     <% } %>
-                    <% if (usuario.facebook) { %>
+                    <% if (user.facebook) { %>
                         <p><a href="<%= user.facebook %>">Facebook</a></p>
                     <% } %>
                 </div>
@@ -49,6 +49,6 @@
             </div>
         </section>
     </main>
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>
 </body>
 </html>

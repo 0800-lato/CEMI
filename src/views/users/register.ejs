@@ -11,41 +11,96 @@
 					<form class="row"  method="POST">
 						<div class="col-12 col-md-6 ">
 							<div class="border rounded border-1 p-3">
-								<h5>Datos generales</h5>
+								<h5>Datos personales</h5>
 
 								<hr>
-								<div class="field-group col-12">
-									<label for="nombredelemprendimiento">Nombre de la emprendedora</label>
+								<div class="row">
+								<div class="field-group col-12 col-md-6">
+									<label for="name">Nombre</label>
 									<input type="text" id="name" name="name"
-										placeholder="Ingresá tu nombre">
+										placeholder="Ingresá tu o tus nombres">
 									<p class="form-text alert-hide">Obligatorio.</p>
 								</div>
 
 
-								<div class="field-group col-12">
-									<label for="nombredelemprendimiento">Nombre del emprendimiento</label>
-									<input type="text" id="entrepeneurshipname" name="entrepeneurshipname"
-										placeholder="Ingresá el nombre de tu emprendimiento">
+								<div class="field-group col-12 col-md-6">
+									<label for="surname">Apellido</label>
+									<input type="text" id="surname" name="surname"
+										placeholder="Ingresá tu o tus apellidos">
 									<p class="form-text alert-hide">Obligatorio.</p>
 								</div>
-
 								<div class="field-group col-12">
+									<label for="country">País de origen</label>
+									<select name="country" id="country" class="form-select">
+										<option value="" selected hidden>Seleccione un país</option>
+										<option value="Argentina">Argentina</option>
+										<option value="Brasil">Brasil</option>
+										<option value="Colombia">Colombia</option>
+										<option value="Venezuela">Venezuela</option>
+									</select>
+									<p class="form-text alert-hide">Obligatorio.</p>
+								</div>
+								<div class="field-group col-12 col-md-6">
 									<label for="email">Email</label>
 									<input type="email" id="email" name="email"
 										placeholder="Ingresá tu correo electrónico">
 									<p class="form-text alert-hide">Obligatorio.</p>
 								</div>
-
-								<div class="field-group col-12">
+								<div class="field-group col-12 col-md-6">
+									<label for="phone">Telefono</label>
+									<input type="text" id="phone" name="phone"
+										placeholder="Ingresá número de contacto">
+									<p class="form-text alert-hide">Obligatorio.</p>
+								</div>
+								<div class="field-group col-12 col-md-6">
 									<label for="password">Contraseña</label>
 									<input type="password" id="password" name="password" placeholder="Contraseña">
 									<p class="form-text alert-hide">Obligatorio.</p>
 								</div>
 
-								<div class="field-group col-12">
-									<label for="confirm-password">Confirmá tu contraseña</label>
-									<input type="password" id="confirm-password" name="confirm-password"
+								<div class="field-group col-12 col-md-6">
+									<label for="password2">Confirmá tu contraseña</label>
+									<input type="password" id="password2" name="password2"
 										placeholder="Confirmá contraseña">
+									<p class="form-text alert-hide">Obligatorio.</p>
+								</div>
+									<h5 class="form-label">Redes sociales</h5>
+									<hr>
+									<div class="row">
+										<div class="field-group col-12 col-md-6">
+											<label for="linkedin">LinkedIn</label>
+											<input type="url" id="linkedin" name="networks"
+												placeholder="Enlace a tu perfil de LinkedIn">
+										</div>
+
+										<div class="field-group col-12 col-md-6">
+											<label for="instagram">Instagram</label>
+											<input type="url" id="instagram" name="networks"
+												placeholder="Enlace a tu perfil de Instagram">
+										</div>
+
+										<div class="field-group col-12 col-md-6">
+											<label for="facebook">Facebook</label>
+											<input type="url" id="facebook" name="networks"
+												placeholder="Enlace a tu perfil de Facebook">
+										</div>
+									</div>
+
+							</div>
+							
+							</div>
+
+
+						</div>
+						<div class="col-12 col-md-6">
+							<div class="row">
+								<div class="col-12 border rounded border-1 p-3 mb-3">
+									<h5>Tu emprendimiento</h5>
+									<hr>
+								<div class="field-group col-12">
+									<label for="entrepeneurshipname">Nombre</label>
+									<input type="text" id="entrepeneurshipname" name="entrepeneurshipname"
+										placeholder="Ingresá el nombre de tu emprendimiento">
 									<p class="form-text alert-hide">Obligatorio.</p>
 								</div>
 								<div class="field-group col-12">
@@ -59,98 +114,28 @@
 								</div>
 							</div>
 
-
-						</div>
-						<div class="col-12 col-md-6">
-							<div class="row">
 								<div class="col-12 border rounded border-1 p-3 mb-3">
 									<h5>Categoría de tu emprendimiento</h5>
 									<hr>
 									<div class="row gap-2">
-										<div class="col-12 col-md-3">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value=""
-													id="flexCheckDefault">
-												<label class="form-check-label" for="flexCheckDefault">
-													Belleza
-												</label>
+										<% categories.forEach(category => { %>
+											<div class="col-12 col-md-3">
+												<div class="form-check">
+													<input class="form-check-input" type="radio" value="<%= category.id %>"
+														id="<%= category.id + category.name %>" name="category">
+													<label class="form-check-label" for="<%= category.id + category.name %>">
+														<%= category.name %>
+													</label>
+												</div>
 											</div>
-										</div>
+										<% }) %>
+									
 
-										<div class="col-12 col-md-3">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value=""
-													id="flexCheckDefault">
-												<label class="form-check-label" for="flexCheckDefault">
-													Tecnología
-												</label>
-											</div>
-										</div>
-										<div class="col-12 col-md-3">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value=""
-													id="flexCheckDefault">
-												<label class="form-check-label" for="flexCheckDefault">
-													Bazar
-												</label>
-											</div>
-										</div>
-										<div class="col-12 col-md-3">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value=""
-													id="flexCheckDefault">
-												<label class="form-check-label" for="flexCheckDefault">
-													Accesorios
-												</label>
-											</div>
-										</div>
-
-										<div class="col-12 col-md-3">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value=""
-													id="flexCheckDefault">
-												<label class="form-check-label" for="flexCheckDefault">
-													Gastronomía
-												</label>
-											</div>
-										</div>
-
-										<div class="col-12 col-md-3">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value=""
-													id="flexCheckDefault">
-												<label class="form-check-label" for="flexCheckDefault">
-													Indumentaria
-												</label>
-											</div>
-										</div>
+									
 									</div>
 
 								</div>
-								<div class="col-12 border rounded border-1 p-3 mb-3">
-									<h5 class="form-label">Redes sociales</h5>
-									<hr>
-									<div class="row">
-										<div class="field-group col-12 col-md-6">
-											<label for="linkedin">LinkedIn</label>
-											<input type="url" id="linkedin" name="linkedin"
-												placeholder="Enlace a tu perfil de LinkedIn">
-										</div>
-
-										<div class="field-group col-12 col-md-6">
-											<label for="instagram">Instagram</label>
-											<input type="url" id="instagram" name="instagram"
-												placeholder="Enlace a tu perfil de Instagram">
-										</div>
-
-										<div class="field-group col-12 col-md-6">
-											<label for="facebook">Facebook</label>
-											<input type="url" id="facebook" name="facebook"
-												placeholder="Enlace a tu perfil de Facebook">
-										</div>
-									</div>
-
-								</div>
+							
 								<div class="col-12 border rounded border-1 p-3 mb-3">
 									<h5>Imágenes</h5>
 									<hr>
