@@ -8,9 +8,9 @@ const {
   profile,
   updateProfile,
   logout,
+  editProfile,
 } = require("../controllers/userController");
-const registerValidator = require('../validator/registerValidator')
-
+const registerValidator = require("../validator/registerValidator");
 
 // /users
 router
@@ -19,6 +19,7 @@ router
   .get("/login", login)
   .post("/login", processLogin)
   .get("/profile", profile)
+  .get("/edit", editProfile)
   .put("/update", updateProfile)
   .get("/logout", logout);
 
