@@ -12,7 +12,7 @@ module.exports = {
       })
         .populate("user")
         .populate("category")
-        .exec();
+        
       return res.render("admin/requests", {
         entrepreneurships,
       });

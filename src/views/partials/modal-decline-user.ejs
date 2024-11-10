@@ -1,0 +1,23 @@
+<!-- Modal -->
+<div class="modal fade" id="decline<%= id %>" tabindex="-1" aria-labelledby="modal-declineLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modal-declineLabel">Advertencia</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/users/rejected/<%= user.id %>?_method=DELETE" method="POST" class="d-flex flex-column align-items-center gap-2">
+            <p class="fs-1 rounded-circle d-flex justify-content-center align-items-center text-white bg-danger" style="width: 100px; height: 100px;"><i class="fa-solid fa-exclamation fa-2xl"></i></p>
+
+            <h5>¿Desea rechazar a la emprendedora <%= user.name %> <%= user.surname %> ?</h5>
+            <p>Los datos serán elimiandos del sistema</p>
+            <div class="modal-footer">
+                <button type="button" class="btn p-2" style="background-color: grey;" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn p-2" style="background-color: red;">Aceptar</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

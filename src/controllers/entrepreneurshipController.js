@@ -12,7 +12,7 @@ module.exports = {
   catalog: async (req, res) => {
     try {
       const entrepreneurships = await EntrepreneurShip.find({
-        active: false,
+        active: true,
       })
         .populate("user")
         .populate("category");
@@ -98,7 +98,6 @@ module.exports = {
       const entrepreneurshipUpdated = await EntrepreneurShip.findByIdAndUpdate(req.params.id,req.body,{new : true})
       if(!entrepreneurshipUpdated) throw new Error("ENTREPRENEURSHIP NOT FOUND")
         return res.redirect('/users/profile')
-
       
     } catch (error) {
       console.log(error)

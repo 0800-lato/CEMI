@@ -33,103 +33,92 @@
             style="background-color: var(--color-SalmonRed)">
             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
               tabindex="0">
-            <% entrepreneurships.forEach(({id,name, description, user}) => { %>
-              <article class="card">
-                <div class="card--body_example">
-                  <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg"
-                    class="img-fluid rounded-start" alt="...">
 
-                  <div class="card--structure p-3">
-                    <h5><%= name %></h5>
-                    <p>de <%= user.name %> <%= user.surname %></p>
-                    <small><%= description %></small>
-                    <div class="card--structure__buttons">
-                      <div class="buttons--yesNo">
-                        <button type="button" class="buttons__yes" data-bs-toggle="modal" data-bs-target="#Approved?">
-                          <i class="fa fa-check" aria-hidden="true"></i>
-                        </button>
-                        <button type="button" class="buttons__no" data-bs-toggle="modal" data-bs-target="#Approved?">
-                          <i class="fa fa-times" aria-hidden="true"></i>
-                        </button>
-                      </div>
-                      <button type="button" class="btn btn-outline-dark"
-                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                        data-bs-toggle="modal" data-bs-target="#preview">
-                        Vista previa
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <%- include('../partials/modal-preview-detail',{
-                id,
-                entrepreneurship : {
-                  id,
-                  name,
-                  description,
-                  user
-                }
-              }) %>
-            <% }) %>
-            </div>
-            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <% entrepreneurships.forEach(({id,name, description, user})=> { %>
+                <article class="card">
+                  <div class="card--body_example">
+                    <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg"
+                      class="img-fluid rounded-start" alt="...">
 
-              <article class="card">
-                <div class="card--body_example">
-                  <img
-                    src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/10/IMG_20230930_144915206-750x1000.jpg"
-                    class="img-fluid rounded-start" alt="...">
-
-                  <div class="card--structure">
-                    <h5>[EmprendiXX]</h5>
-                    <p>Solicita modificar</p>
-                    <small>_<small>
-                        <div class="card--structure__buttons">
-                          <div class="buttons--yesNo">
-                            <button type="button" class="buttons__yes" data-bs-toggle="modal"
-                              data-bs-target="#Approved?">
-                              <i class="fa fa-check" aria-hidden="true"></i>
-                            </button>
-                            <button type="button" class="buttons__no" data-bs-toggle="modal"
-                              data-bs-target="#Approved?">
-                              <i class="fa fa-times" aria-hidden="true"></i>
-                            </button>
-                          </div>
-                          <button type="button" class="btn btn-outline-dark"
-                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
-                            data-bs-toggle="modal" data-bs-target="#preview">
-                            Vista previa
+                    <div class="card--structure p-3">
+                      <h5>
+                        <%= name %>
+                      </h5>
+                      <p>de <%= user.name %>
+                          <%= user.surname %>
+                      </p>
+                      <small>
+                        <%= description %>
+                      </small>
+                      <div class="card--structure__buttons">
+                        <div class="buttons--yesNo">
+                          <button type="button" class="buttons__yes" data-bs-toggle="modal" data-bs-target="#approve<%= id %>">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                          </button>
+                          <button type="button" class="buttons__no" data-bs-toggle="modal" data-bs-target="#decline<%= id %>">
+                            <i class="fa fa-times" aria-hidden="true"></i>
                           </button>
                         </div>
+                        <button type="button" class="btn btn-outline-dark"
+                          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                          data-bs-toggle="modal" data-bs-target="#preview<%= id %>">
+                          Vista previa
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </article>
-            </div>
-
-        </section>
-
-        <div class="modal fade" id="Approved?" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog  modal-sm">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">¿Estás seguro?</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                <a class="btn btn-primary" href="/admin/requests">Sí<a>
-              </div>
+                  <%- include('../partials/modal-preview-detail',{ id, entrepreneurship : { id, name, description, user }
+                  }) %>
+                 
+                </article>
+                <%- include('../partials/modal-approve-user',{id, user,name}) %>
+                <%- include('../partials/modal-decline-user',{id, user,name}) %>
+                  <% }) %>
             </div>
           </div>
-        </div>
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
 
-   
+            <article class="card">
+              <div class="card--body_example">
+                <img
+                  src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/10/IMG_20230930_144915206-750x1000.jpg"
+                  class="img-fluid rounded-start" alt="...">
+
+                <div class="card--structure">
+                  <h5>[EmprendiXX]</h5>
+                  <p>Solicita modificar</p>
+                  <small>_<small>
+                      <div class="card--structure__buttons">
+                        <div class="buttons--yesNo">
+                          <button type="button" class="buttons__yes" data-bs-toggle="modal" data-bs-target="#Approved?">
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                          </button>
+                          <button type="button" class="buttons__no" data-bs-toggle="modal" data-bs-target="#Approved?">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark"
+                          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;"
+                          data-bs-toggle="modal" data-bs-target="#preview">
+                          Vista previa
+                        </button>
+                      </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </section>
+    
 
 
 
 
 
-       
+
+
+
+
 
 
       </main>

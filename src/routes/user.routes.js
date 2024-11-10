@@ -9,6 +9,8 @@ const {
   updateProfile,
   logout,
   editProfile,
+  approved,
+  rejected,
 } = require("../controllers/userController");
 const registerValidator = require("../validations/registerValidator");
 
@@ -21,6 +23,8 @@ router
   .get("/profile", profile)
   .get("/edit", editProfile)
   .put("/update", updateProfile)
-  .get("/logout", logout);
+  .get("/logout", logout)
+  .post("/approved/:id",approved)
+  .delete("/rejected/:id",rejected)
 
 module.exports = router;

@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const connectDB = async () => {
   const { MONGODB_USER, MONGODB_PASSWORD, MONGODB_CLUSTER, MONGODB_DATABASE } =
     process.env;
-  console.log(process.env.MONGODB_PASSWORD);
 
   try {
     await mongoose.connect(

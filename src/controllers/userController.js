@@ -42,7 +42,7 @@ module.exports = {
         password: hashSync(password, 12),
         networks: networks.filter((net) => net != ""),
         role: "user",
-        validate: false,
+        validated: false,
       });
 
       const user = await newUser.save();
@@ -78,73 +78,108 @@ module.exports = {
 
     try {
       const user = await User.findOne({
-        email
+        email,
       });
-      
+
       if (user && compareSync(password, user.password)) {
         req.session.userLogin = {
           id: user.id,
           name: user.name,
           rol: user.role,
         };
-  
-        return user.role == "admin" ? res.redirect("/admin") : res.redirect("/users/profile");
+
+        return user.role == "admin"
+          ? res.redirect("/admin")
+          : res.redirect("/users/profile");
       } else {
-        return res.redirect('/')
+        return res.redirect("/");
       }
     } catch (error) {
       console.log(error);
-      
-      return res.redirect('/')
 
+      return res.redirect("/");
     }
-
-  
   },
   profile: async (req, res) => {
     try {
-      const user = await User.findById(req.session.userLogin.id)
+      const user = await User.findById(req.session.userLogin.id);
       const entrepreneurship = await EntrepreneurShip.findOne({
-        user : user.id
-      }).populate('category')      
+        user: user.id,
+      }).populate("category");
       return res.render("users/user-profile", {
         user,
-        entrepreneurship
-
+        entrepreneurship,
       });
     } catch (error) {
-      console.log(error)
-      return res.redirect('/')
+      console.log(error);
+      return res.redirect("/");
     }
-  
   },
   editProfile: async (req, res) => {
-
     try {
-      const user = await User.findById(req.session.userLogin.id)
-     
-      return res.render("users/edit-profile",{
+      const user = await User.findById(req.session.userLogin.id);
+
+      return res.render("users/edit-profile", {
         user,
       });
     } catch (error) {
-      console.log(error)
-      return res.redirect('/')
+      console.log(error);
+      return res.redirect("/");
     }
-  
   },
   updateProfile: async (req, res) => {
-
     try {
-      const userUpdated = await User.findByIdAndUpdate(req.session.userLogin.id,req.body,{new: true})
-      if(!userUpdated) throw new Error('USER NOT FOUND')
+      const userUpdated = await User.findByIdAndUpdate(
+        req.session.userLogin.id,
+        req.body,
+        { new: true }
+      );
+      if (!userUpdated) throw new Error("USER NOT FOUND");
       return res.redirect("/users/profile");
     } catch (error) {
-      console.log(error)
-      return res.redirect('/')
+      console.log(error);
+      return res.redirect("/");
     }
   },
   logout: (req, res) => {
     req.session.destroy();
     return res.redirect("/");
+  },
+  approved: async (req, res) => {
+    try {
+      const userApproved = await User.findByIdAndUpdate(
+        req.params.id,
+        { validated: true },
+        { new: true }
+      );
+      if (!userApproved) throw new Error("USER NOT FOUND");
+      const entrepreneurship = await EntrepreneurShip.findOne({
+        user : userApproved.id
+      })
+      await EntrepreneurShip.findByIdAndUpdate(entrepreneurship.id,{
+        active : true
+      })
+      /* TODO: enviar un mail de aprobación */
+      return res.redirect("/admin");
+    } catch (error) {
+      console.log(error);
+      return res.redirect("/");
+    }
+  },
+  rejected: async (req, res) => {
+    try {
+      const userRejected = await User.findByIdAndDelete(req.params.id);
+      if (!userRejected) throw new Error("USER NOT FOUND");
+      const entrepreneurship = await EntrepreneurShip.findOne({
+        user : userRejected.id
+      })
+      await EntrepreneurShip.findByIdAndDelete(entrepreneurship.id)
+      
+      /* TODO: enviar un mail de rechazo */
+      return res.redirect("/admin");
+    } catch (error) {
+      console.log(error);
+      return res.redirect("/");
+    }
   },
 };
