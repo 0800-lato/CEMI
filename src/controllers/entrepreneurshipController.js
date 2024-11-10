@@ -34,9 +34,7 @@ module.exports = {
         .populate("user")
         .populate("category")
         .exec();
-
-      console.log(entrepreneurship);
-
+      
       return res.render("entrepreneurship/detail", {
         entrepreneurship,
       });

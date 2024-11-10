@@ -5,38 +5,10 @@
   <body class="catalog catalog__main__container">
     <%- include('../partials/header',{ title : 'Catalog' }) %>
 
-    <main class="container">
-      <div class="row my-3">
-        <div class="col-12 col-md-10 col-lg-6 mx-auto">
-          <div class="card">
-            <img
-              src="https://datos.gob.es/sites/default/files/styles/blog_image/public/blog/image/shutterstock_478470601_cortada.jpg?itok=5BEM0Xk3"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title"><%= entrepreneurship.name %></h5>
-              <h6>De <%= entrepreneurship.user.name %></h6>
-              <p class="card-text"><%= entrepreneurship.description %></p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <% entrepreneurship.user.networks.forEach(net => { %>
-              <li class="list-group-item">
-                <a href="<%= net %>" class="card-link"
-                  ><%= net.toLowerCase().includes('instagram') ? 'Instagram' :
-                  net.toLowerCase().includes('facebook') ? 'Facebook' :
-                  'LinkedIn' %></a
-                >
-              </li>
-              <% }) %>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link">Más Info</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    <%- include('../partials/entrepreneur-detail',{
+      entrepreneurship
+    }) %>
+  
     <%- include('../partials/footer',{title :'catalog'}) %>
   </body>
 </html>
