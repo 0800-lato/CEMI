@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const session = require('express-session');
 const app = express();
 const port = 3000;
 
@@ -15,6 +16,13 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 //configuración para recibir datos de los formularios
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+//configuración de sesión
+app.use(session({
+  secret : 'Mi secreto',
+  resave: false,
+  saveUninitialized: true,
+}))
 
 //conexión con mongodb
 connectDB();

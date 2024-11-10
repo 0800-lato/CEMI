@@ -1,5 +1,5 @@
 const { validationResult } = require("express-validator");
-const { hashSync } = require("bcryptjs");
+const { hashSync, compareSync } = require("bcryptjs");
 const { getData, storeData } = require("../data");
 
 /* implementa base de datos */
@@ -73,25 +73,36 @@ module.exports = {
   login: (req, res) => {
     return res.render("login");
   },
-  processLogin: (req, res) => {
-    const users = getData("users.json");
-    const { email, pass } = req.body;
+  processLogin: async (req, res) => {
+    const { email, password } = req.body;
 
-    const user = users.find((user) => user.email == email);
-
-    if (user && compareSync(pass, user.password)) {
-      req.session.userLogin = {
-        id: user.id,
-        name: user.name,
-        rol: user.rol,
-      };
-
-      return user.rol == "admin" ? res.redirect("/admin") : res.redirect("/");
-    } else {
-      return res.render("login", {
-        msg: "Credenciales inválidas",
+    try {
+      const user = await User.findOne({
+        email
       });
+      
+      if (user && compareSync(password, user.password)) {
+        req.session.userLogin = {
+          id: user.id,
+          name: user.name,
+          rol: user.role,
+        };
+  
+        return user.role == "admin" ? res.redirect("/admin") : res.redirect("/");
+      } else {
+        return res.redirect('/')
+        return res.render("login", {
+          msg: "Credenciales inválidas",
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      
+      return res.redirect('/')
+
     }
+
+  
   },
   profile: (req, res) => {
     const users = getData("users.json");
