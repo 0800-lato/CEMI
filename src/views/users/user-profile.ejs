@@ -1,54 +1,106 @@
 <!DOCTYPE html>
-<html>
-<%- include('../partials/head', { title: 'Perfil de Usuario' }) %>
-<body>
-    <main> 
-        <section class="profile-container">
-            <h1>Perfil de Emprendimiento</h1>
-            <div class="profile-details">
-                <div class="field-group">
-                    <h2>Nombre del emprendimiento</h2>
-                    <p id="nombredelemprendimiento"><%= user.nombredelemprendimiento %></p>
+<html lang="en">
+<%- include('../partials/head',{ title : 'Bandeja de Solicitudes' }) %>
+
+  <body class="admin">
+    <%- include('../partials/header',{ title : 'Bandeja de Solicitudes' }) %>
+      <main class="admin--main">
+        <div class="admin--bar">
+          <div class="admin--titleBar">
+            <h3 class="admin--title">Mi perfil de emprendedora</h3>
+          </div>
+        </div>
+
+        <section class="admin-requests__dashboard">
+          <div class="admin-requests__options">
+            <ul class="nav nav-pills nav-fill gap-2 p-1 small bs-secondary rounded-5 shadow-sm" id="myTab"
+              role="tablist"
+              style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-white); --bs-nav-pills-link-active-bg: var(--color-PurpleTres);">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active rounded-5" id="home-tab" data-bs-toggle="tab"
+                  data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                  aria-selected="true">Mis datos</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-5" id="profile-tab" data-bs-toggle="tab"
+                  data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                  aria-selected="false">Mi emprendimiento</button>
+              </li>
+
+            </ul>
+          </div>
+          <div class="tab-content pt-1 pb-5 mt-1 mb-5 rounded-1" id="myTabContent"
+            style="background-color: var(--color-SalmonRed)">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+              tabindex="0">
+                <div class="card" style="max-width: 600px;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="d-flex align-items-center flex-column gap-3">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq0cW88uigskZgRs-SiMR6zXxBVtrbVwUvkg&s" class="img-fluid" alt="">
+                                    <a href="/users/edit" class="btn">Editar perfil</a>
+                                </div>
+                              
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Nombre: <b><%= user.name %></b> </li>
+                                    <li class="list-group-item">Apellido: <b><%= user.surname %></b> </li>
+                                    <li class="list-group-item">Email: <b><%= user.email %></b> </li>
+                                    <li class="list-group-item">Teléfono: <b><%= user.phone %></b> </li>
+                                    <li class="list-group-item">País: <b><%= user.country %></b></li>
+                                    <li class="list-group-item">Mis redes:
+                                        <ul class=" mt-2">
+                                            <% user.networks.forEach(net => { %>
+                                                <li class="list-group-item"><a href="<%= net %>" target="_blank"><%= net %></a> </li>
+        
+                                            <% }) %>
+                                           
+                                          </ul>
+                                    </li>
+                                  </ul>
+                            </div>
+                           
+                        </div>
+                       
+                    </div>
                 </div>
-                <div class="field-group">
-                    <h2>Email</h2>
-                    <p id="email"><%= user.email %></p>
-                </div>
-                <div class="field-group">
-                    <h2>Descripción</h2>
-                    <p id="description"><%= user.description %></p>
-                </div>
-                <h3>Categoría de tu emprendimiento</h3>
-                <ul class="categories">
-                    <% user.categorias?.forEach(function(categoria) { %>
-                        <li><%= categoria %></li>
-                    <% }) %>
-                </ul>
-                <div class="field-group">
-                    <h2>Imagen de Perfil</h2>
-                    <img src="<%= user.image %>" alt="Imagen de perfil del emprendimiento">
-                </div>
-                <div class="field-group">
-                    <h2>Imagen de Portada</h2>
-                    <img src="<%= user.imageAdditional %>" alt="Imagen de portada del emprendimiento">
-                </div>
-                <h3>Redes sociales</h3>
-                <div class="social-links">
-                    <% if (user.linkedin) { %>
-                        <p><a href="<%= user.linkedin %>">LinkedIn</a></p>
-                    <% } %>
-                    <% if (user.instagram) { %>
-                        <p><a href="<%= user.instagram %>">Instagram</a></p>
-                    <% } %>
-                    <% if (user.facebook) { %>
-                        <p><a href="<%= user.facebook %>">Facebook</a></p>
-                    <% } %>
-                </div>
-                <button onclick="location.href='/admin/editar-perfil'">Editar Perfil</button>
-                <!-- not sure -->
             </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="card" style="max-width: 800px;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12 col-md-5">
+                                <div class="d-flex align-items-center flex-column gap-3">
+                                    <img src="https://datos.gob.es/sites/default/files/styles/blog_image/public/blog/image/shutterstock_478470601_cortada.jpg?itok=5BEM0Xk3" class="img-fluid" alt="">
+                                    <a href="/entrepreneurships/edit" class="btn">Editar Emprendimiento</a>
+                                </div>
+                              
+                            </div>
+                            <div class="col-12 col-md-7">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Emprendimiento: <b><%= entrepreneurship.name %></b> </li>
+                                    <li class="list-group-item">Descripción: <b><%= entrepreneurship.description %></b> </li>
+                                    <li class="list-group-item">Categoría: <b><%= entrepreneurship.category.name %></b> </li>
+                                
+                                  </ul>
+                            </div>
+                           
+                        </div>
+                       
+                    </div>
+                </div>
+          
+            </div>
+
         </section>
-    </main>
-    <%- include('../partials/footer') %>
-</body>
+
+      
+      </main>
+      <%- include('../partials/footer') %>
+
+
+  </body>
+
 </html>

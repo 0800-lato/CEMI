@@ -8,26 +8,21 @@
 				<section class="register__main__section" style="max-width: 720px; margin: 30px auto;">
 					<h1 class="mb-3">Actualizá los datos de tu emprendimiento</h1>
 					<!-- lo ideal sería que esto le llegue al admin, pero redirija a la pagina de perfil de usuario -->
-					<form class="row"  method="POST">
+					<form class="row"  method="POST" action="/entrepreneurships/update/<%= entrepreneurship.id%>?_method=PUT">
 						<div class="col-12">
 							<div class="row">
 								<div class="col-12 border rounded border-1 p-3 mb-3">
-									<h5>Tu emprendimiento</h5>
-									<hr>
 								<div class="field-group col-12">
 									<label for="entrepeneurshipname">Nombre</label>
 									<input type="text" id="entrepeneurshipname" name="entrepeneurshipname"
-										placeholder="Ingresá el nombre de tu emprendimiento">
-									<p class="form-text alert-hide">Obligatorio.</p>
-								</div>
+										placeholder="Ingresá el nombre de tu emprendimiento" value="<%= entrepreneurship.name %>">
+										<small class=" text-danger"><%= (locals.errors && errors.entrepeneurshipname) && errors.entrepeneurshipname.msg %></small>
+									</div>
 								<div class="field-group col-12">
 									<label for="description" class="form-label">Descripción</label>
 									<textarea style="resize: none;" name="description" class="form-control"
-										id="description" rows="3"></textarea>
-									<small id="description-error" class="text-danger ms-2" hidden>Error al cargar la
-										información
-										del
-										emprendimiento</small>
+										id="description" rows="3"><%= entrepreneurship.description %></textarea>
+										<small id="description-error" class="text-danger"><%= (locals.errors && errors.description) && errors.description.msg %></small>
 								</div>
 							</div>
 
@@ -39,7 +34,7 @@
 											<div class="col-12 col-md-3">
 												<div class="form-check">
 													<input class="form-check-input" type="radio" value="<%= category.id %>"
-														id="<%= category.id + category.name %>" name="category">
+														id="<%= category.id + category.name %>" name="category" <%= category.name == entrepreneurship.category.name && 'checked' %>>
 													<label class="form-check-label" for="<%= category.id + category.name %>">
 														<%= category.name %>
 													</label>

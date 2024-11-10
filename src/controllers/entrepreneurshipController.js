@@ -3,6 +3,7 @@ const { getData, storeData } = require("../data");
 const {getOrderItems, getPagedItems} = require("../helpers");
 const EntrepreneurShip = require("../models/EntrepreneurShip.js");
 const { isValidObjectId } = require("mongoose");
+const Category = require("../models/Category.js");
 let entrepreneurshipsFilter;
 let keyword;
 let category;
@@ -76,10 +77,33 @@ module.exports = {
     return res.render("entrepreneurship/add");
   },
   create: (req, res) => {},
-  edit: (req, res) => {
-    const categories = getData("categories.json");
-    return res.render("entrepreneurship/edit", { categories });
+  edit: async (req, res) => {
+    try {
+      const categories = await Category.find()
+      const entrepreneurship = await EntrepreneurShip.findOne({
+        user : req.session.userLogin.id
+      }).populate('category')
+      return res.render("entrepreneurship/edit", { 
+        categories,
+        entrepreneurship
+      });
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/')
+    }
+   
   },
-  update: (req, res) => {},
+  update: async (req, res) => {
+    try {
+      const entrepreneurshipUpdated = await EntrepreneurShip.findByIdAndUpdate(req.params.id,req.body,{new : true})
+      if(!entrepreneurshipUpdated) throw new Error("ENTREPRENEURSHIP NOT FOUND")
+        return res.redirect('/users/profile')
+
+      
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/')
+    }
+  },
   destroy: (req, res) => {},
 };

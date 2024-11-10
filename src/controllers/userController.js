@@ -88,12 +88,9 @@ module.exports = {
           rol: user.role,
         };
   
-        return user.role == "admin" ? res.redirect("/admin") : res.redirect("/");
+        return user.role == "admin" ? res.redirect("/admin") : res.redirect("/users/profile");
       } else {
         return res.redirect('/')
-        return res.render("login", {
-          msg: "Credenciales inválidas",
-        });
       }
     } catch (error) {
       console.log(error);
@@ -104,17 +101,47 @@ module.exports = {
 
   
   },
-  profile: (req, res) => {
-    const users = getData("users.json");
-    return res.render("users/user-profile", {
-      user: users[0],
-    });
+  profile: async (req, res) => {
+    try {
+      const user = await User.findById(req.session.userLogin.id)
+      const entrepreneurship = await EntrepreneurShip.findOne({
+        user : user.id
+      }).populate('category')      
+      return res.render("users/user-profile", {
+        user,
+        entrepreneurship
+
+      });
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/')
+    }
+  
   },
-  editProfile: (req, res) => {
-    return res.render("users/edit-profile");
+  editProfile: async (req, res) => {
+
+    try {
+      const user = await User.findById(req.session.userLogin.id)
+     
+      return res.render("users/edit-profile",{
+        user,
+      });
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/')
+    }
+  
   },
-  updateProfile: (req, res) => {
-    return res.render("profile");
+  updateProfile: async (req, res) => {
+
+    try {
+      const userUpdated = await User.findByIdAndUpdate(req.session.userLogin.id,req.body,{new: true})
+      if(!userUpdated) throw new Error('USER NOT FOUND')
+      return res.redirect("/users/profile");
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/')
+    }
   },
   logout: (req, res) => {
     req.session.destroy();

@@ -23,100 +23,41 @@
           </nav>
 
           <div class="admin--users_cards">
-            <article class="card--users">
-              <div class="card--users--body_example">
-                <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg"
-                  class="img-fluid rounded-start" alt="...">
+            <% users.forEach(({id, name, surname, entrepreneurship}) => { %>
+              <article class="card--users">
+                <div class="card--users--body_example">
+                  <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg"
+                    class="img-fluid rounded-start" alt="...">
+  
+                  <div class="card--structure">
+  
+                    <div class="buttons--admin__users">
+                        <h5 class="card--title__down"><%= name %> <%= surname %></h5>
+  
+  
+                      <div class="users__buttons">
+                       
+                        <button type="button" class="buttons__suspend p-2 rounded-5" style="background-color: orange;" data-bs-toggle="modal" data-bs-target="#modal-suspend">
+                          <i class="fa-solid fa-ban"></i>
+                          <small>Suspender</small>
+                        </button>
+                        <button type="button" class="buttons__delete p-2 rounded-5" style="background-color: red;" data-bs-toggle="modal" data-bs-target="#modal-delete">
+                          <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
+                          <small>Eliminar</small></button>
+                      </div>
+                      <%- include('../partials/modal-suspend-user') %>
+                      <%- include('../partials/modal-delete-user') %>
 
-                <div class="card--structure">
-                  <h5 class="card--title__upper">[EmprendiXX]</h5>
-
-                  <div class="buttons--admin__users">
-                    <h5 class="card--title__down">[EmprendiXX]</h5>
-
-
-                    <div class="users__buttons">
-                      <a type="button" class="buttons__edit" href="/entrepreneurships/edit">
-                        <i class="fa-solid fa-pen"></i>
-                        <small>Editar</small>
-                      </a>
-                      <button type="button" class="buttons__suspend" data-bs-toggle="modal" data-bs-target="">
-                        <i class="fa-solid fa-ban"></i>
-                        <small>Suspender</small>
-                      </button>
-                      <button type="button" class="buttons__delete" data-bs-toggle="modal" data-bs-target="#Approved?">
-                        <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
-                        <small>Eliminar</small></button>
                     </div>
+  
+  
                   </div>
-
-
                 </div>
-              </div>
-            </article>
+              </article>
+            <% }) %>
+        
 
-            <article class="card--users">
-              <div class="card--users--body_example">
-                <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg"
-                  class="img-fluid rounded-start" alt="...">
-
-                <div class="card--structure">
-                  <h5 class="card--title__upper">[EmprendiXX]</h5>
-
-                  <div class="buttons--admin__users">
-                    <h5 class="card--title__down">[EmprendiXX]</h5>
-
-
-                    <div class="users__buttons">
-                      <button type="button" class="buttons__edit">
-                        <i class="fa-solid fa-pen"></i>
-                        <small>Editar</small>
-                      </button>
-                      <button type="button" class="buttons__suspend" data-bs-toggle="modal" data-bs-target="">
-                        <i class="fa-solid fa-ban"></i>
-                        <small>Suspender</small>
-                      </button>
-                      <button type="button" class="buttons__delete" data-bs-toggle="modal" data-bs-target="#Approved?">
-                        <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
-                        <small>Eliminar</small></button>
-                    </div>
-                  </div>
-
-
-                </div>
-              </div>
-            </article>
-            <article class="card--users">
-              <div class="card--users--body_example">
-                <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg"
-                  class="img-fluid rounded-start" alt="...">
-
-                <div class="card--structure">
-                  <h5 class="card--title__upper">[EmprendiXX]</h5>
-
-                  <div class="buttons--admin__users">
-                    <h5 class="card--title__down">[EmprendiXX]</h5>
-
-
-                    <div class="users__buttons">
-                      <button type="button" class="buttons__edit">
-                        <i class="fa-solid fa-pen"></i>
-                        <small>Editar</small>
-                      </button>
-                      <button type="button" class="buttons__suspend" data-bs-toggle="modal" data-bs-target="">
-                        <i class="fa-solid fa-ban"></i>
-                        <small>Suspender</small>
-                      </button>
-                      <button type="button" class="buttons__delete" data-bs-toggle="modal" data-bs-target="#Approved?">
-                        <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
-                        <small>Eliminar</small></button>
-                    </div>
-                  </div>
-
-
-                </div>
-              </div>
-            </article>
+         
           </div>
           <nav aria-label="...">
             <ul class="pagination">

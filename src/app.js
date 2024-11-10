@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 const session = require('express-session');
+const methodOverride = require('method-override');
 const app = express();
 const port = 3000;
 
@@ -22,7 +23,9 @@ app.use(session({
   secret : 'Mi secreto',
   resave: false,
   saveUninitialized: true,
-}))
+}));
+
+app.use(methodOverride('_method'))
 
 //conexión con mongodb
 connectDB();

@@ -11,7 +11,7 @@ router
   .get("/search", search)
   .get("/add", add)
   .post("/add", create)
-  .get("/edit/:id?", edit)
+  .get("/edit", edit)
   .put("/update/:id", update)
   .delete("/destroy/:id", destroy);
 

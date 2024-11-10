@@ -192,7 +192,7 @@ body.admin .btn {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-left: 0px;
   font-size: 0.8rem;
-  max-width: 140px;
+  max-width: 300px;
 }
 
 body.admin   .btn:hover {
