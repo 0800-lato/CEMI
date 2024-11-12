@@ -1,47 +1,37 @@
 footer {
     background-color: var(--color-PurpleMariposa);
-    padding-top: 0px;
-    padding: 20px 14px 20px 14px;
-     
+  padding: 20px;
+color:var(--color-PearlWhite)
 }
-
-
-.Foot--foot{
+.footer__copyright{
+    font-size: 0.8rem;
+}
+.footer__article{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    align-items: center;
-}
-.footer img{
-    top: 20px
-}
+    flex-direction: column;
+    align-items: flex-start;
 
+}
 .footer__nosotros{
     text-align: left;
-    min-width: 100px;
-    padding: 0 14px;
-}
-.footer__nosotros h3{
-    color:var(--color-PearlWhite);
-
-}
-.footer__nosotros p{
-    color:var(--color-PearlWhite);
-
-}
-
-.footer__enlaces {
-    min-width: 100px;
     padding: 0 14px;
 }
 
-.footer__enlaces h3 {
+.footer__nosotros img{
+    width: 100%;
+}
+
+
+.footer__enlaces h5 {
     margin-bottom: 10px;
-    color:var(--color-PearlWhite);
-}
 
+}
+.foter__modal{
+    font-size: 0.8rem;
+}
+.footer__article h5 p:hover{
+color: var(--color-SmokyBlue);
+}
 .footer__enlaces ul {
     list-style-type: none;
     padding: 0;
@@ -55,12 +45,12 @@ footer {
 
 .footer__enlaces a {
     text-decoration: none;
-    color:var(--color-PearlWhite);
+    color:var(--color-CoolGray);
 
 }
 
 .footer__enlaces a:hover {
-    color: var(--color-CoolGray);
+    color: var(--color-PurpleMariposa);
     /* Cambia el color al pasar el mouse */
 }
 
@@ -72,10 +62,10 @@ footer {
     margin-bottom: 45px;
 }
 
-.footer__contacto h3{
+.footer__contacto h5{
     margin-bottom: 10px;
 
-    color:var(--color-PearlWhite);
+
 
 }
 .footer__contacto ul{
@@ -84,34 +74,27 @@ footer {
     margin: 0;
 }
 
-.footer__contacto ul li {
-    color:var(--color-PearlWhite);
-}
 
-.social--media{
-
-}
 .border-line{
     background-color: var(--color-PearlWhite);
     padding: 1px;
 }
-.social--media a{
+.social__media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social__media a{
 text-decoration: none;
-color: black;
-font-size: 25px;
-margin-left: 10px;
+font-size: 1.5rem;
+margin-right: 15px;
 }
 
-.social--media p{
-    text-align: center;
-    color: var(--color-PearlWhite);
-}
 
 .fa-brands fa-instagram, .fa-brands fa-facebook-f{
     color: #fff
 }
 
-/* verificar, tendrían que estar del mismo color que el resto de las cosas */
 
 @media (min-width: 768px) {
     footer {
@@ -119,9 +102,17 @@ margin-left: 10px;
         align-items: center;
 
     }
-
+    .footer__article{
+  
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-between;
+    }
     .footer__enlaces {
         text-align: center;
         margin-bottom: 20px;
+    }
+    .footer__nosotros img{
+        width: 300px;
     }
 }
