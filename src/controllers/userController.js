@@ -9,11 +9,16 @@ const EntrepreneurShip = require("../models/EntrepreneurShip.js");
 
 module.exports = {
   register: async (req, res) => {
-    const categories = await Category.find();
+    try {
+      const categories = await Category.find();
 
-    return res.render("users/register", {
-      categories,
-    });
+      return res.render("users/register", {
+        categories,
+      });
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/')
+    }
   },
   processRegister: async (req, res) => {
     /* obtengo las validaciones */
