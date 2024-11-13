@@ -80,7 +80,7 @@
                           </p>
                           <div class="d-flex gap-2">
                             <% user.networks.forEach(net=> { %>
-                              <a class="links" href="/entrepreneurships<%= links%>">
+                              <a class="links" href="/entrepreneurships<%= links%> " target="_blank" >
                                 <i
                                   class="fa-brands fa-<%= net.toLowerCase().includes('facebook') ? 'facebook' : net.toLowerCase().includes('instagram') ? 'instagram' : 'linkedin' %>"></i>
                               </a>
