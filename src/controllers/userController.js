@@ -86,6 +86,8 @@ module.exports = {
         email,
       });
 
+      if(!user) throw new Error('Usuario incorrecto')
+
       if (user && compareSync(password, user.password)) {
         req.session.userLogin = {
           id: user.id,
@@ -97,12 +99,14 @@ module.exports = {
           ? res.redirect("/admin")
           : res.redirect("/users/profile");
       } else {
-        return res.redirect("/");
+        throw new Error('Contraseña incorrecta')
       }
     } catch (error) {
       console.log(error);
 
-      return res.redirect("/");
+      return res.render("home",{
+        error : error.message
+      });
     }
   },
   profile: async (req, res) => {

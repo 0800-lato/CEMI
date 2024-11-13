@@ -8,7 +8,7 @@
 				<section class="register__main__section" style="max-width: 720px; margin: 30px auto;">
 					<h1 class="mb-3">Actualizá los datos de tu emprendimiento</h1>
 					<!-- lo ideal sería que esto le llegue al admin, pero redirija a la pagina de perfil de usuario -->
-					<form class="row"  method="POST" action="/entrepreneurships/update/<%= entrepreneurship.id%>?_method=PUT">
+					<form class="row"  method="POST" action="/entrepreneurships/update/<%= entrepreneurship.id%>?_method=PUT" enctype="multipart/form-data">
 						<div class="col-12">
 							<div class="row">
 								<div class="col-12 border rounded border-1 p-3 mb-3">
@@ -53,16 +53,18 @@
 									<hr>
 									<div class="row">
 										<div class="field-group col-12 col-md-6">
-											<label for="image-main">Imagen de perfil</label>
-											<input name="image" type="file" class="form-control" id="image-main">
+											<label for="profileImage">Imagen de perfil</label>
+											<img src="<%= entrepreneurship.profileImage %>" alt="">
+											<input name="profileImage" type="file" class="form-control" id="profileImage">
 											<small id="image-error" class="text-danger ms-2" hidden>Error al cargar la
 												imagen</small>
 										</div>
 
 										<div class="field-group col-12 col-md-6">
-											<label for="image-additional">Imagen de portada</label>
-											<input name="image-additional" type="file" class="form-control"
-												id="image-additional">
+											<label for="coverImage">Imagen de portada</label>
+											<img src="<%= entrepreneurship.coverImage %>" alt="">
+											<input name="coverImage" type="file" class="form-control"
+												id="coverImage">
 											<small id="image-error" class="text-danger ms-2" hidden>Error al cargar la
 												imagen</small>
 										</div>
