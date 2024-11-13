@@ -1,4 +1,4 @@
-const EntrepreneurShip = require("../models/EntrepreneurShip.js");
+const EntrepreneurShip = require("../models/EntrepreneurShips.js");
 const User = require("../models/User.js");
 
 module.exports = {
