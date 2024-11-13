@@ -39,6 +39,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.use("/", indexRouter);
+app.use("/contact", indexRouter);
 app.use("/admin", indexRouter);
 app.use("/admin/users", indexRouter);
 

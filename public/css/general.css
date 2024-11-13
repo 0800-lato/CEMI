@@ -39,6 +39,10 @@ header {
     flex-grow: 1;
     justify-content: space-between;
   }
+  .navbar-nav ul{
+    justify-content: space-around;
+  }
+
 
   .header__enlaces ul {
     list-style-type: none;
@@ -104,7 +108,7 @@ header {
   .navbar-a {
     position: absolute;
     top: 50px;
-    right: 30px; /*NO SE ESTA EJECUTANDO LO PISA EL DE PC*/
+    right: 30px;
   }
 
   @media (min-width: 768px) {
@@ -113,7 +117,7 @@ header {
     }
 
     .navbar-a {
-      right: 50px;
+      display: none;
     }
 
     #menu img {

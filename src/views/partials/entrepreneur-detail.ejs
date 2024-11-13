@@ -10,7 +10,7 @@
             <div class="card-body">
               <h5 class="card-title"><%= entrepreneurship.name %></h5>
               <h6>De <%= entrepreneurship.user.name %></h6>
-              <p class="card-text"><%= entrepreneurship.description %></p>
+              <p class="overflow-auto"><%= entrepreneurship.description %></p>
             </div>
             <ul class="list-group list-group-flush">
               <% entrepreneurship.user.networks.forEach(net => { %>

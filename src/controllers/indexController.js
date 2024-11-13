@@ -5,6 +5,9 @@ module.exports = {
   index: (req, res) => {
     return res.render("home");
   },
+  contact: (req, res) => {
+    return res.render("contact");
+  },
   requests: async (req, res) => {
     try {
       const entrepreneurships = await EntrepreneurShip.find({
@@ -32,4 +35,5 @@ module.exports = {
       return res.render("/")
     }
   },
+  
 };
