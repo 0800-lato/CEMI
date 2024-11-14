@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head',{ title : 'Listado de Categorías' }) %>
+
+  <body class="admin">
+    <%- include('../partials/header-admin',{ title : 'Listado de Categorías' }) %>
+
+      <main class="admin-users">
+        <div class="admin--bar">
+          <div class="admin--titleBar">
+            <h3 class="admin--title">Lista de Categorias</h3>
+          </div>
+        </div>
+
+        <section class="admin--users_dashboard">
+          <div class="d-flex gap-2 align-items-center">
+            <nav class="navbar bg-body-tertiary" style="background-color: navajowhite">
+              <div class="container-fluid">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-0 rounded-end-0" type="search" placeholder="Search" aria-label="Search">
+                  <button class="search__button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+              </div>
+            </nav>
+            <a href="" class="btn btn-primary">Agregar</a>
+          </div>
+      
+
+          <div class="admin--users_cards">
+            <% categories.forEach(({id, name, icon}) => { %>
+              <article class="card--users">
+                <div class="card--users--body_example">
+                  <img src="https://reddigitalizadas.com.ar/wp-content/uploads/2023/09/cookies-TS-750x1000.jpg"
+                    class="img-fluid rounded-start" alt="...">
+  
+                  <div class="card--structure">
+  
+                    <div class="buttons--admin__users">
+                        <h5 class="card--title__down"><%= name %> </h5>
+  
+  
+                      <div class="users__buttons">
+                       
+                        <button type="button" class="buttons__suspend p-2 rounded-5" style="background-color: orange;" data-bs-toggle="modal" data-bs-target="#modal-suspend">
+                          <i class="fa-solid fa-ban"></i>
+                          <small>Ocultar</small>
+                        </button>
+                        <button type="button" class="buttons__suspend p-2 rounded-5" style="background-color: green;" data-bs-toggle="modal" data-bs-target="#modal-suspend">
+                          <i class="fa-solid fa-pencil"></i>
+                          <small>Editar</small>
+                        </button>
+                        <button type="button" class="buttons__delete p-2 rounded-5" style="background-color: red;" data-bs-toggle="modal" data-bs-target="#modal-delete">
+                          <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
+                          <small>Eliminar</small></button>
+                      </div>
+                      <%- include('../partials/modal-suspend-user') %>
+                      <%- include('../partials/modal-delete-user') %>
+
+                    </div>
+  
+  
+                  </div>
+                </div>
+              </article>
+            <% }) %>
+        
+
+         
+          </div>
+          <nav aria-label="...">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+
+        </section>
+      </main>
+      <%- include('../partials/footer') %>
+  </body>
+
+</html>

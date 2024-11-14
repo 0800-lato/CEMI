@@ -1,3 +1,4 @@
+const Category = require("../models/Category.js");
 const EntrepreneurShip = require("../models/EntrepreneurShip.js");
 const User = require("../models/User.js");
 
@@ -21,7 +22,7 @@ module.exports = {
       });
     } catch (error) {
       console.log(error)
-      return res.render("/")
+      return res.redirect("/")
     }
   },
   users: async (req, res) => {
@@ -32,8 +33,19 @@ module.exports = {
       });
     } catch (error) {
       console.log(error)
-      return res.render("/")
+      return res.redirect("/")
     }
   },
+  categories : async (req,res) => {
+    try {
+      const categories = await Category.find()
+      return res.render("admin/categories",{
+        categories
+      });
+    } catch (error) {
+      console.log(error)
+      return res.redirect("/")
+    }
+  }
   
 };
