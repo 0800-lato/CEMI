@@ -54,6 +54,7 @@
 									<div class="row">
 										<div class="field-group col-12 col-md-6">
 											<label for="image-main">Imagen de perfil</label>
+											<img src="<%= entrepreneurship.profileImage %>" class="img-fluid my2" alt="profile-image">
 											<input name="image" type="file" class="form-control" id="image-main">
 											<small id="image-error" class="text-danger ms-2" hidden>Error al cargar la
 												imagen</small>
@@ -61,6 +62,8 @@
 
 										<div class="field-group col-12 col-md-6">
 											<label for="image-additional">Imagen de portada</label>
+											<img src="<%= entrepreneurship.coverImage %>" class="img-fluid my2" alt="">
+
 											<input name="image-additional" type="file" class="form-control"
 												id="image-additional">
 											<small id="image-error" class="text-danger ms-2" hidden>Error al cargar la
