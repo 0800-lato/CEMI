@@ -20,9 +20,12 @@ Promise.all(
       })
     ).then(resp => {
       console.log(resp);
-/*       console.log(imageUrls);
 
-      req.imageUrls = imageUrls.map((img) => img.secure_url);
+    /*   req.imageUrls = imageUrls.map((img) => {
+        return {
+          name : img.
+        }
+      });
       console.log(req.imageUrls); */
       
     }).catch(error =>  console.log(error))
