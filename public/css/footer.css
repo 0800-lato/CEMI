@@ -20,7 +20,9 @@ color:var(--color-PearlWhite)
 .footer__nosotros img{
     width: 100%;
 }
-
+.footer__enlaces{
+    padding: 0 14px;
+}
 
 .footer__enlaces h5 {
     margin-bottom: 10px;
@@ -94,7 +96,9 @@ margin-right: 15px;
 .fa-brands fa-instagram, .fa-brands fa-facebook-f{
     color: #fff
 }
-
+.footer__modal-body ul li{
+    align-items: flex-start;
+}
 
 @media (min-width: 768px) {
     footer {
