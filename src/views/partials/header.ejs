@@ -36,11 +36,12 @@
         <% if (!locals.userLogin) { %>
           <li class="nav-item">
             <a class="nav-link" href="/login" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Login</a>
+            <small class="text-danger"><%= locals.error && error %></small>
           </li>
         <% }else{ %>
          
           <li class="nav-item">
-            <a class="nav-link" href="/"> Salir </a>
+            <a class="nav-link" href="/users/logout"> Salir </a>
           </li>
           <% } %>
         </ul>
