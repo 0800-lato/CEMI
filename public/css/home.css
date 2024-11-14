@@ -1,0 +1,65 @@
+body.home {
+  font-family: "Roboto", sans-serif;
+
+  color: var(--color-PurpleDos);
+  margin: 0;
+  padding: 0;
+}
+
+body.home .carousel-inner {
+  width: 100%;
+  height: 600%;
+  margin-top: 10px;
+}
+body.home .carousel-inner img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+body.home section {
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+body.home section:hover {
+  transform: scale(1.02);
+}
+
+body.home h2 {
+  color: var(--color-PurpleDos);
+  margin-top: 0;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--color-SmokyBlue);
+  padding-bottom: 10px;
+}
+
+body.home p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+body.home .btn {
+  background-color: var(--color-SmokyBlue);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.home .btn:hover {
+  background-color: var(--color-RosaButterf);
+  transform: scale(1.05);
+}
+
+body.home .btn + .btn {
+  margin-left: 10px;
+}

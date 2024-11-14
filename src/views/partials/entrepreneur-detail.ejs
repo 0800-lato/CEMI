@@ -1,0 +1,30 @@
+<main class="container">
+  <div class="row my-3">
+    <div class="col-12 col-md-10 col-lg-6 mx-auto">
+      <div class="card">
+        <img
+          src="https://datos.gob.es/sites/default/files/styles/blog_image/public/blog/image/shutterstock_478470601_cortada.jpg?itok=5BEM0Xk3"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title"><%= entrepreneurship.name %></h5>
+          <h6>De <%= entrepreneurship.user.name %></h6>
+          <p class="overflow-auto"><%= entrepreneurship.description %></p>
+        </div>
+        <div class="d-flex gap-2 p-3">
+          <% entrepreneurship.user.networks.forEach(net => { %>
+          <a href="<%= net %>">
+            <img
+              width="35"
+              src="/img/<%= net.toLowerCase().includes('instagram') ? 'Instagram.png' :
+              net.toLowerCase().includes('facebook') ? 'Facebook.png' : 'LinkedIn.png'
+              %>"
+            />
+          </a>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

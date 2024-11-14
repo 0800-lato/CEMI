@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head', { title: 'Registro' }) %>
+
+	<body class="register register__main__container">
+		<%- include('../partials/header',{title: 'Actualizá tus datos' }) %>
+			<main class="container">
+				<section class="register__main__section" style="max-width: 720px; margin: 30px auto;">
+					<h1 class="mb-3">Actualizá tus datos de contacto</h1>
+					<form class="row"  method="POST" action="/users/update?_method=PUT">
+						<div class="col-12">
+							<div class="border rounded border-1 p-3">
+							
+								<div class="row">
+								<div class="field-group col-12 col-md-6">
+									<label for="name">Nombre</label>
+									<input type="text" id="name" name="name" disabled value="<%= user.name %>">
+								</div>
+
+
+								<div class="field-group col-12 col-md-6">
+									<label for="surname">Apellido</label>
+									<input type="text" id="surname" name="surname"
+                                    disabled
+									value="<%= user.surname %>"
+									>
+								</div>
+								<div class="field-group col-12">
+									<label for="country">País de origen</label>
+									<input type="text" id="surname" name="surname"
+                                    disabled
+									value="<%= user.country %>"
+									>
+								</div>
+								<div class="field-group col-12 col-md-6">
+									<label for="email">Email</label>
+									<input type="email" id="email" name="email" placeholder="Ingresá tu email" disabled value="<%= user.email %>">
+                                    <p class="form-text alert-hide">Obligatorio.</p>
+
+								</div>
+								<div class="field-group col-12 col-md-6">
+									<label for="phone">Telefono</label>
+									<input type="text" id="phone" name="phone"
+										placeholder="Ingresá número de contacto" value="<%= user.phone %>">
+									<p class="form-text alert-hide">Obligatorio.</p>
+								</div>
+								
+									<h5 class="form-label">Redes sociales</h5>
+									<hr>
+									<div class="row">
+										<div class="field-group col-12 col-md-6">
+											<label for="linkedin">LinkedIn</label>
+											<input type="url" id="linkedin" name="networks" value="<%= user.networks.find(net => net.includes('linkedin')) %>"
+												placeholder="Enlace a tu perfil de LinkedIn">
+										</div>
+										<div class="field-group col-12 col-md-6">
+											<label for="instagram">Instagram</label>
+											<input type="url" id="instagram" name="networks" value="<%= user.networks.find(net => net.includes('instagram')) %>"
+												placeholder="Enlace a tu perfil de Instagram">
+										</div>
+
+										<div class="field-group col-12 col-md-6">
+											<label for="facebook">Facebook</label>
+											<input type="url" id="facebook" name="networks" value="<%= user.networks.find(net => net.includes('facebook')) %>"
+												placeholder="Enlace a tu perfil de Facebook">
+										</div>
+									</div>
+
+							</div>
+							
+							</div>
+
+                            <div class="col-12">
+								<div class="d-flex align-items-center justify-content-end">
+								
+									<button type="submit">Guardar cambios</button>
+								</div>
+
+
+							</div>
+						</div>
+				
+
+
+
+
+					</form>
+				</section>
+			</main>
+			<%- include('../partials/footer') %>
+	</body>
+
+</html>

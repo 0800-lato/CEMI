@@ -1,0 +1,66 @@
+<header class="container-fluid">
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+
+
+      <a class="navbar-a " href="#">
+        <i class="fa-solid fa-right-to-bracket" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+          style="color: var(--color-PearlWhite)"></i></a>
+      <button class="navbar-toggler" style="border-style: none;" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/entrepreneurships/catalog?category=null&keyword=null"> Catálogo de emprendedoras
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/register"> Sumate </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://cemi.org.ar/"> Nosotros </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact"> Contacto </a>
+          </li>
+         
+        </ul>
+        <ul class="navbar-nav" style="justify-content: space-around;">
+        <% if (!locals.userLogin) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/login" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Login</a>
+          </li>
+        <% }else{ %>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="/"> Salir </a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content d-flex ">
+          <div class="modal-header align-items-center">
+            <h3 id="staticBackdropLabel">Iniciar sesión</h3>
+            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+
+          </div>
+          <%- include('./modal-form-login') %>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

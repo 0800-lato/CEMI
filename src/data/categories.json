@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "name": "Biju/Coquette"
+  },
+  {
+    "id": 2,
+    "name": "Carpintería"
+  },
+  {
+    "id": 3,
+    "name": "Coaching"
+  },
+  {
+    "id": 4,
+    "name": "Consultoria para emprender"
+
+  },
+  {
+    "id": 5,
+    "name": "Cosmética Natural"
+
+  },
+  {
+    "id": 6,
+    "name": "Encuadernación"
+
+  },
+
+  {
+  "id": 7,
+  "name": "Gastronomía"
+},
+{
+  "id": 8,
+  "name": "Insumos"
+},
+{
+  "id": 9,
+  "name": "Impresiones 3D"
+},
+{
+  "id": 10,
+  "name": "Marroquineria"
+
+},
+{
+  "id": 11,
+  "name": " Material didactico/Jugueteria"
+},
+{
+  "id": 12,
+  "name":   "Servicios de Educación"
+  
+
+}, 
+
+{
+"id": 13,
+"name": "Sublimación"
+},
+{ "id": 14,
+  "name": "Tejido" 
+},
+
+{
+    "id": 15,
+    "name": "Tecnología/Community Manager"
+  },
+
+  {
+  "id": 16,
+  "name": "Pintura/Arte"
+  },
+  {
+  "id": 17,
+  "name": "Ropa/Costura"
+  },
+  {
+    "id": 18,
+    "name": "Velas/Esencias"
+ }
+
+]

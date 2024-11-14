@@ -1,0 +1,47 @@
+/* HEADER */
+
+
+.catalog__main__section__navbar{    
+    padding: 10px;
+    background-color: var(--color-SmokyBlue);
+    justify-content: space-between;
+    border: 1px  ;
+    border-radius: 10px;
+}
+.catalog__main__section__navbar button{
+    border-color: var(--color-PearlWhite);
+}
+.catalog_header-navbar a {
+    font-size: 2rem;
+}
+.catalog__main__section{
+    margin: 0px 15px;
+}
+
+
+/* MAIN */
+
+.items{
+    margin: 40px;
+}
+.article{
+ box-shadow: 5px 5px 5px black;
+}
+
+/* Estilo para el banner */
+.banner {
+    position: relative;
+    background-image: url('/img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.catalog__main__section a{
+    text-decoration: none;
+}

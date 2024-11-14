@@ -1,0 +1,155 @@
+body.register {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: var(--color-PurpleMariposa);
+    margin: 0;
+    padding: 0;
+}
+
+.register .form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--color-PurpleMariposa);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--color-LipstickRed);
+    padding-bottom: 10px;
+}
+
+body.register section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+}
+
+.field-group {
+    margin-bottom: 20px;
+}
+
+.field-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.label[for="description"] {
+    font-weight: 500;
+}
+
+
+.field-group input,
+.field-group select,
+.field-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-PurpleMariposa);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.field-group input:focus, field-group textarea:focus {
+    outline: none;
+    border-color: var(--color-LipstickRed);
+}
+
+.form-text {
+    color: var(--color-SalmonRed);
+    font-size: 0.9rem;
+    display: none;
+}
+
+ .form-text.alert-hide {
+    display: none;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.categories input {
+    margin-right: 5px;
+}
+
+.categories label {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* no me toma el efecto en Descripción */
+
+.register button[type="submit"], [type="reset"]{
+    background-color: var(--color-SmokyBlue);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 5px;
+}
+
+.register button:hover[type="submit"], [type="reset"]{
+    background-color: var(--color-PurpleMariposa);
+    transform: scale(1.05);
+}
+
+.register button[type="reset"] {
+    background-color: var(--color-LipstickRed);
+}
+
+.register button[type="reset"]:hover {
+    background-color: var(--color-PurpleMariposa);
+}
+
+.register input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+label[for="tyc"] {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.register text-danger {
+    color: var(--color-LipstickRed);
+    font-size: 0.9rem;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .register form-container {
+        padding: 20px;
+    }
+
+    .register h1 {
+        font-size: 1.8rem;
+    }
+
+    .register button, btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .register categories {
+        flex-direction: column;
+    }
+}

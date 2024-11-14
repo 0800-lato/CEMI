@@ -1,0 +1,28 @@
+{
+  "name": "mujeres_emprendedoras",
+  "version": "1.0.0",
+  "description": "Nuestro proyecto está destinado a la creación de una landing page para la Red de Mujeres Migrantes. Cuenta con una página principal (home) donde figura la información importante de la fundación y sus proyectos.  Por otro lado, esta página home redirige a la página con la información de los emprendimientos de la fundación.  Allí existe la posibilidad de crear un usuario, lo cual conlleva la creación de un emprendimiento que deben aprobar desde la fundación previo a que sea parte oficialmente de la página. Adicionalmente, existirá una sección para ingresar a su cuenta y un área para realizar cambios a nivel administrador para poder aprobar o rechazar los emprendimientos.",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon -w src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.8.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7"
+  }
+}
