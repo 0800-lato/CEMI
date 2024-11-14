@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -5,12 +6,13 @@ const session = require('express-session');
 const methodOverride = require('method-override');
 const morgan = require('morgan')
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const indexRouter = require("./routes/index.routes.js");
 const entrepreneurshipRouter = require("./routes/entrepreneurship.routes");
 const userRouter = require("./routes/user.routes.js");
 const connectDB = require("./config/connectDB.js");
+const setLocals = require('./middlewares/setLocals.js');
 
 //configuración de los recursos estáticos
 app.use(express.static(path.join(__dirname, "..", "public")));
@@ -33,6 +35,8 @@ app.use(methodOverride('_method'))
 
 //conexión con mongodb
 connectDB();
+
+app.use(setLocals)
 
 //configuración del motor de plantillas
 app.set("view engine", "ejs");
