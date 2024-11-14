@@ -106,6 +106,8 @@ module.exports = {
         name,
         description,
         category,
+        profileImage : req.imageUrls.find(img => img.name == 'profile')?.file,
+        coverImage : req.imageUrls.find(img => img.name == 'cover')?.file
       },{new : true})
       if(!entrepreneurshipUpdated) throw new Error("ENTREPRENEURSHIP NOT FOUND")
         return res.redirect('/users/profile')

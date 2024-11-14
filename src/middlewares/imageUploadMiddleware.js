@@ -13,26 +13,22 @@ module.exports = async (req, res, next) => {
       return next();
     }
 
-Promise.all(
+    Promise.all(
       Object.values(req.files).map(async (file) => {
-        
-        return await uploader(file[0].path)
+        return await uploader(file[0].path);
       })
-    ).then(resp => {
-      console.log(resp);
+    )
+      .then((resp) => {
+        req.imageUrls = resp.map((img) => {
+          return {
+            name: img.original_filename,
+            file: img.secure_url,
+          };
+        });
 
-    /*   req.imageUrls = imageUrls.map((img) => {
-        return {
-          name : img.
-        }
-      });
-      console.log(req.imageUrls); */
-      
-    }).catch(error =>  console.log(error))
-
-
-
-    next();
+        next();
+      })
+      .catch((error) => console.log(error));
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error uploading images" });
