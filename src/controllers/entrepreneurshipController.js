@@ -94,6 +94,8 @@ module.exports = {
    
   },
   update: async (req, res) => {
+
+    console.log(req.imageUrls)
     try {
       const entrepreneurshipUpdated = await EntrepreneurShip.findByIdAndUpdate(req.params.id,req.body,{new : true})
       if(!entrepreneurshipUpdated) throw new Error("ENTREPRENEURSHIP NOT FOUND")
