@@ -1,0 +1,34 @@
+.contact__dashboard{
+    
+}
+.contact__dashboard form{
+    justify-content: center;
+}
+
+.contact__button[type="submit"], [type="reset"]{
+    background-color: var(--color-SmokyBlue);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 5px;
+}
+.contact__button:hover[type="submit"], [type="reset"]{
+    background-color: var(--color-SalmonRed);
+    transform: scale(1.05);
+}
+.contact__button[type="reset"] {
+    background-color: var(--color-LipstickRed);
+}
+
+.contact__button[type="reset"]:hover {
+    background-color: var(--color-SalmonRed);
+}
+
+.contact__p{
+    text-align:center;
+}
