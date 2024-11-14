@@ -59,38 +59,48 @@
                 <%= locals.keyword ? keyword : locals.category ? category : "Todas las emprendedoras" %>
               </h5>
               <% entrepreneurships.forEach(({id,name, description,links, image, title, category, user})=> { %>
-                <div class="col-12 col-md-6">
-                  <article class="card shadow">
-                    <div class="card-body ">
+
+
+
+                <div class="col-12 col-md-6 catalog-card">
+                  <article class="card shadow catalog-card-hover">
+
+                    <div class="catalog-bg">
+                    <div class="card-body">
                       <div class="row">
-                        <div class="col-12 col-lg-4 d-flex justify-content-center align-items-start">
-                          <img class="img-fluid" style="height: 300px; object-fit: contain;"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_AVFJwi086bFy31ygcD6uTfwSnRBiIlRv0g&s"
-                            alt="">
+                        <div class="col-12 col-lg-4 d-flex justify-content-center align-items-start catalog-img-hover">
+                          <img class="img-fluid rounded" style="height: 300px; object-fit: contain;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_AVFJwi086bFy31ygcD6uTfwSnRBiIlRv0g&s" alt="">
                         </div>
-                        <div class="col-12 col-lg-8 p-2">
-                          <h6 class="category">
+                        <div class="col-12 col-lg-8 p-3 position-relative">
+                          <h6 class="catalog-category text-muted font-weight-bold">
                             <%= category.name %>
                           </h6>
-                          <h2 class="name">
+                          <h2 class="catalog-name mb-2" style="font-size: 1.5rem; color: #333;">
                             <%= name %>
                           </h2>
-                          <p class="overflow-auto">
-                            
+                          <hr>
+                          <p class="overflow-auto  mb-3 catalog-description" style="max-height: 100px;">
                             <%= description %>
                           </p>
-                          <div class="d-flex gap-2">
-                            <% user.networks.forEach(net=> { %>
-                              <a class="links" href="/entrepreneurships<%= links%>">
-                                <i
-                                  class="fa-brands fa-<%= net.toLowerCase().includes('facebook') ? 'facebook' : net.toLowerCase().includes('instagram') ? 'instagram' : 'linkedin' %>"></i>
+                          <div class="d-flex gap-2 mb-3">
+                            <% user.networks.forEach(net => { %>
+                              <a class="catalog-links text-dark catalog-social-icon" href="/entrepreneurships<%= links %>" target="_blank">
+                                <i class="fa-brands fa-<%= net.toLowerCase().includes('facebook') ? 'facebook' : net.toLowerCase().includes('instagram') ? 'instagram' : 'linkedin' %>"></i>
                               </a>
-                              <% }) %>
+                            <% }) %>
                           </div>
-                          <a class="more" href="/entrepreneurships/detail/<%= id %>">ver más</a>
+                          <a class="btn btn-outline-secondary catalog-btn-hover" href="/entrepreneurships/detail/<%= id %>">Ver más</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   </article>
-
                 </div>
+                
+
+
+
+
 
                 <% }) %>
                   <% }else{ %>
